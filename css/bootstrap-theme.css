@@ -393,6 +393,11 @@ fieldset[disabled] .btn-danger.active {
   border-radius: 0;
 }
 @media (max-width: 767px) {
+  .password-container {
+    max-width: 1000px;
+    margin: 100px; 
+    
+}
   .navbar .navbar-nav .open .dropdown-menu > .active > a,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
