@@ -102,6 +102,13 @@
     background-color: #1CA347;
     border-color: #1CA347;
 }
+.password-container {
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+
 
 
  
