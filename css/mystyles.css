@@ -18,12 +18,15 @@
 }
 
 .jumbotron {
-    padding:70px 30px 70px 30px;
+    padding:10px 30px 10px 30px;
+    
     margin:0px auto;
     background: #183F8B ;
     color:floralwhite;
 }
-
+.logo {
+    text-align: center;
+}
 address{
     font-size:80%;
     margin:0px;
