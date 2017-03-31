@@ -121,6 +121,11 @@
   margin: 0 0 0 5px;
   color: #183F8B !important;
 }
+.social li a i:hover {
+  font-size: 16px;
+  margin: 0 0 0 5px;
+  color: whitesmoke !important;
+}
 .footer-bottom {
   background: #16336A;
   padding-top: 10px;
