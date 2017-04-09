@@ -14,7 +14,9 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
-
+    <link href="css/navslide.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -195,7 +197,7 @@
 
     </div>
 
-<footer>
+ <footer>
     <div class="footer" id="footer">
         <div class="container">
             <div class="row">
@@ -207,8 +209,8 @@
                       Stafford TX 77477<br>
                       <br>
                        
-                    <i class="fa fa-phone"></i> : +00 000 000<br>
-                  <i class="fa fa-fax"></i> : +00 000 0000<br>
+                    <i class="fa fa-phone"></i> : +852 1234 5678<br>
+                  <i class="fa fa-fax"></i> : +852 8765 4321<br>
                   <i class="fa fa-envelope"></i> : 
                                  <a href="mailto:coffeehouse@na.edu">coffeehouse@na.edu</a>    
                         
@@ -273,41 +275,38 @@
     </div>
     <!--/.footer-bottom--> 
 </footer>
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
 
-    <a href="contactus.html" class="back-to-top" style="display: inline;">
+    <a href="index.html" class="back-to-top" style="display: inline;">
         <i class="fa fa-chevron-circle-up"></i>
     </a>
-    <a class="back-to-top" style="display: inline;" href="contactus.html"></a>
+    <a class="back-to-top" style="display: inline;" href="index.html"></a>
 
-    <script>
+<script>
 
-        $('.back-to-top').css({"display": "none"})
+$('.back-to-top').css({"display": "none"})
 
 
-            jQuery(document).ready(function() {
-                var offset = 250;
-                var duration = 300;
-            jQuery(window).scroll(function() {
-                if (jQuery(this).scrollTop() > offset) {
-            jQuery('.back-to-top').fadeIn(duration);
-                } else {
-            jQuery('.back-to-top').fadeOut(duration);
-                }
-            });
+jQuery(document).ready(function() {
+var offset = 250;
+var duration = 300;
+jQuery(window).scroll(function() {
+if (jQuery(this).scrollTop() > offset) {
+jQuery('.back-to-top').fadeIn(duration);
+} else {
+jQuery('.back-to-top').fadeOut(duration);
+}
+});
  
-            jQuery('.back-to-top').click(function(event) {
-                event.preventDefault();
-            jQuery('html, body').animate({scrollTop: 0}, duration);
-            return false;
-            })
-        });
+jQuery('.back-to-top').click(function(event) {
+event.preventDefault();
+jQuery('html, body').animate({scrollTop: 0}, duration);
+return false;
+})
+});
  
 
 </script>
