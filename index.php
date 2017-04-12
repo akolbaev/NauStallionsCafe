@@ -25,54 +25,55 @@
 </head>
 
 <body>
-<?php include 'includes/menu.php' ?>
-<?php include 'includes/carousel.php' ?>
-<?php include 'includes/main.php' ?>
+<?php include 'includes/inc_header.php' ?>
 <?php 
 	if (isset($_GET['page'])) {
               switch ($_GET['page']) {
-                   case 'site_layout':
-						include('includes/inc_site_layout.php');
+                   case 'home_page':
+						include('includes/inc_home_page.php');
                         break;
-                   case 'control_structures':
-                        include('includes/inc_control_structures.php');
+                   case 'menu':
+                        include('includes/inc_menu.php');
 						break;
-					case 'string_functions':
-     					include('includes/inc_string_functions.php');
+					case 'bulletin_board':
+     					include('includes/inc_bulletin_board.php');
      					break;
-					case 'web_forms': 
-						include('includes/inc_web_forms.php'); 
+					case 'contact_us': 
+						include('includes/inc_contact_us.php'); 
 						break;
-					case 'midterm_assesment':
-     					include('includes/inc_midterm_assesment.php');
+					case 'login_page':
+     					include('includes/inc_login.php');
      					break;
-					case 'state_information':
-     					include('includes/inc_state_information.php');
+					case 'forgot_password':
+     					include('includes/inc_forgot_password.php');
      					break;
-					case 'user_templates':
-     					include('includes/inc_user_templates.php');
+					case 'bulletin_selling':
+     					include('includes/inc_bulletin_selling.php');
      					break;
-					case 'final_project':
-     					include('includes/inc_final_project.php');
+					case 'bulletin_buying':
+     					include('includes/inc_bulletin_buying.php');
+     					break;
+     				case 'bulletin_living':
+     					include('includes/inc_bulletin_living.php');
      					break;
 					case 'home_page': // A value of
                   // 'home_page' means
                   // to display the
                   // default page
 					default:
-     					include('includes/inc_home.php');
+     					include('includes/inc_home_page.php');
      					break;
      				}
      			}
     else  {// If no button has been selected, then display
          // the default page
-         include('includes/inc_home.php');
+         include('includes/inc_home_page.php');
      }
 
 
  ?>
-<?php include 'includes/footer.php' ?>
-<?php include 'includes/gotop.php' ?>
+<?php include 'includes/inc_footer.php' ?>
+<?php include 'includes/inc_gotop.php' ?>
 
 
 
