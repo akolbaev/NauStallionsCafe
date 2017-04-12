@@ -27,6 +27,7 @@
 <body>
 <?php include 'includes/inc_header.php' ?>
 <?php 
+	echo "Welcome " . get_name($_SESSION['email']);
 	if (isset($_GET['page'])) {
               switch ($_GET['page']) {
                    case 'home_page':

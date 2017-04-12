@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 		$_SESSION['email'] = $email;
 
-		redirect("admin.php");
+		redirect("index.php");
 		exit;
 	} else {
 		set_message('<div class="alert alert-warning" role="alert" col-md-12"><p>Wrong username or password.</p></div>');
