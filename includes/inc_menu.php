@@ -72,13 +72,6 @@
 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
-
-    <a href="index.html" class="back-to-top" style="display: inline;">
-        <i class="fa fa-chevron-circle-up"></i>
-    </a>
-    <a class="back-to-top" style="display: inline;" href="index.html"></a>
 
 
 
