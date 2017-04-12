@@ -1,11 +1,4 @@
-<?php
 
-include_once "includes/login.inc.php";
-
-if(logged_in()) {
-    redirect("index.php");
-}
- ?>
  
 <!DOCTYPE html>
 <html>
@@ -47,7 +40,7 @@ if(logged_in()) {
     </div>            
 </div>
 <div class="main-container">
-		<?php display_message(); ?>
+
        <!-- Login preferences -->
       <div class = "login-container"> 
         <div class="row">
