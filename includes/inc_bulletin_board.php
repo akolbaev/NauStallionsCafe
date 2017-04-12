@@ -16,7 +16,7 @@
                <h1 style="text-align: center;">Bulletin Board</h1>
                <hr>
             </div>
-        </div>
+        
         
         <div class="container">
             <div class="row">
@@ -266,7 +266,7 @@
                 </div>
             </div>
         </div>
-    </div>
+  
     <div tabindex="-1" class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
