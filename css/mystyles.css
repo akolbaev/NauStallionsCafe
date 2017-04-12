@@ -79,7 +79,8 @@ body{
 }
 
 .carousel {
-    background:#1A237E;
+    background-image: url('../images/beans3.jpg');
+    background-size: cover;
     margin:0px -15px;
     
 
@@ -98,8 +99,6 @@ body{
     position: absolute;
     bottom: 0px;
 }
-
-
 
 
 

@@ -19,7 +19,9 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                       <a class="navbar-brand" href="#"><img src="img/img/logo.png" height=30 width=37>  </a>
+                
+                       <a class="navbar-brand" href="/index.php"><img src="img/img/logo.png" height=30 width=37 >  </a>
+                            
 
               
 
@@ -103,8 +105,10 @@
         </div>
     </div> -->  
             
-            
-    <header class="jumbotron">
+   
+                
+    <header class="jumbotron" id="jumbotronimage">
+        <header id="jumbotronimage-overlay">   
 
         <!-- Main component for a primary marketing message or call to action -->
 
@@ -118,10 +122,12 @@
                   
                   
                 </div>
-                
-        
-            </div>
+                 </div>
         </div>
+        
+          </header>
+                
+          
     </header>
           
 

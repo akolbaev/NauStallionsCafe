@@ -1,6 +1,7 @@
    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <footer>
     <div class="footer" id="footer">
+        <div id="footer-overlay">
         <div class="container">
             <div class="row">
                 <div class="   col-lg-2 col-md-3">
@@ -58,9 +59,11 @@
         </div>
         <!--/.container--> 
     </div>
+        </div>
     <!--/.footer-->
     
-    <div class="footer-bottom">
+    <div class="footer-bottom" id="footerbottom">
+        <div class="footerbottom-overlay">
         <div class="container">
             <p class="pull-left"> © Copyright 2017 NAU Coffeehouse</p>
             <div class="pull-right">
@@ -72,9 +75,11 @@
                         <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
                         <li> <a href="#"> <i class="fa fa-envelope">   </i> </a> </li>
                     </ul>
-            </div>
+            </div></div>
         </div>
     </div>
+  
+  
     <!--/.footer-bottom--> 
 </footer>
 
