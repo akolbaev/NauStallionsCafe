@@ -30,7 +30,7 @@
                 </div>
 
                 <div class=" col-lg-2 col-md-6 col-sm-push-1">
-                  <a class="brand" href="#">
+                  <a class="brand" href="index.php?page=home_page">
             <img src="img/img/logo.png" alt="Logo" style="height: 200px;" class="logo">
             </a>
                 </div>

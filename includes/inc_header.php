@@ -19,7 +19,7 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                       <a class="navbar-brand" href="#"><img src="img/img/logo.png" height=30 width=37>  </a>
+                       <a class="navbar-brand" href="index.php?page=home_page"><img src="img/img/logo.png" height=30 width=37>  </a>
 
               
 
