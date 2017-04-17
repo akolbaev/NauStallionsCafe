@@ -26,15 +26,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `member`
 --
 
-CREATE TABLE IF NOT EXISTS `member` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `member` (
+  `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `fullname` varchar(50) NOT NULL,
   `email` varchar(150) NOT NULL,
   `password` varchar(50) NOT NULL,
   `date_added` datetime NOT NULL
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=11 ;
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Dumping data for table `member`
 --
