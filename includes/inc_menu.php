@@ -126,6 +126,16 @@
                            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
                            comment: ''
                         }
+                   ,
+                         {
+                           name:'French Cake',
+                           image: 'images/elaicheesecake.png',
+                           category: 'dessert',
+                           label:'',
+                           price:'2.99',
+                           description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
+                           comment: ''
+                        }
                         ];
 
             this.dishes = dishes;
