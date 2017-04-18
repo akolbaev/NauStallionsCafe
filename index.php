@@ -34,6 +34,7 @@
 <body>
 <?php include 'includes/inc_header.php' ?>
 <?php 
+	
 	if (isset($_GET['page'])) {
               switch ($_GET['page']) {
                    case 'home_page':

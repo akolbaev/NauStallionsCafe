@@ -1,5 +1,4 @@
- 
- <!DOCTYPE html>
+<!DOCTYPE html>
  <html>
  <head>
      <title></title>
@@ -19,9 +18,7 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                
-                       <a class="navbar-brand" href="/index.php"><img src="img/img/logo.png" height=30 width=37 >  </a>
-                            
+                       <a class="navbar-brand" href="index.php?page=home_page"><img src="img/img/logo.png" height=30 width=37>  </a>
 
               
 
@@ -97,18 +94,14 @@
                       <button type="button" class="btn btn-default btn-sm"
                        data-dismiss="modal">Cancel</button>
                 </form>
-
              
-
             </div>
         </div>
         </div>
     </div> -->  
             
-   
-                
-    <header class="jumbotron" id="jumbotronimage">
-        <header id="jumbotronimage-overlay">   
+            
+    <header class="jumbotron">
 
         <!-- Main component for a primary marketing message or call to action -->
 
@@ -122,16 +115,13 @@
                   
                   
                 </div>
-                 </div>
-        </div>
-        
-          </header>
                 
-          
+        
+            </div>
+        </div>
     </header>
           
 
  
  </body>
  </html>
- 

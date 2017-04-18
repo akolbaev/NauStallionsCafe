@@ -6,6 +6,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head
          content must come *after* these tags -->
     <title></title>
+
         <!-- Bootstrap -->
    
     
@@ -74,7 +75,7 @@
 
 
 
-<script src="../bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
     <script>
 
         var app = angular.module('Project1',[]);
@@ -109,6 +110,15 @@
                         },
                         {
                            name:'ElaiCheese Cake',
+                           image: 'images/elaicheesecake.png',
+                           category: 'dessert',
+                           label:'',
+                           price:'2.99',
+                           description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
+                           comment: ''
+                        },
+                         {
+                           name:'French Cake',
                            image: 'images/elaicheesecake.png',
                            category: 'dessert',
                            label:'',
