@@ -1,6 +1,16 @@
+<?php
+if(isset($_GET['msg']) && $_GET['msg']!='')
+{
+	$msg=$_GET['msg'];
+}
+if(isset($_GET['name']) && $_GET['name']!='')
+{
+	$msg=$_GET['name'];
+}
+error_reporting(0);
 
- 
-<!DOCTYPE html>
+?>
+
 <html>
 <head>
 	<title></title>
@@ -10,14 +20,6 @@
  
 	<script type="text/javascript">
 		$(function() {
-
-   			$('#login-form-link').click(function(e) {
-    			$("#login-form").delay(100).fadeIn(100);
- 				$("#register-form").fadeOut(100);
-				$('#register-form-link').removeClass('active');
-				$(this).addClass('active');
-				e.preventDefault();
-			});
 			$('#register-form-link').click(function(e) {
 				$("#register-form").delay(100).fadeIn(100);
  				$("#login-form").fadeOut(100);
@@ -35,7 +37,7 @@
     <div class="col-xs-12">
         <ul class="breadcrumb">
             <li><a href="index.php?page=home_page">Home</a></li>
-            <li class="active">Login</li>
+            <li class="active">SignUp</li>
         </ul>
     </div>            
 </div>
@@ -49,10 +51,10 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">Sign In</a>
+								<a href="index.php?page=login_page">Sign In</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="#" id="register-form-link">Sign Up</a>
+								<a href="index.php?page=signup_page" class="active" id="register-form-link">Sign Up</a>
 							</div>
 						</div>
 						<hr>
@@ -60,35 +62,7 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="#" method="post" role="form" style="display: block;">
-									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="">
-									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-										<label for="remember"> Remember Me</label>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Sign In">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-12">
-												<div class="text-center">
-													<a href="index.php?page=forgot_password" tabindex="5" class="forgot-password">Forgot Password?</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-								<form id="register-form" action="#" method="post" role="form" style="display: none;">
+								<form id="register-form" action="signuppros.php" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="" value="">
 									</div>
@@ -111,7 +85,7 @@
 									</div>
 									
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="">
+										<input type="password" name="u_hash" id="password" tabindex="2" class="form-control" placeholder="Password" required="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="">

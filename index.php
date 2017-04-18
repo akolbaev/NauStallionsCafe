@@ -47,14 +47,20 @@
      					include('includes/inc_bulletin_board.php');
      					break;
 					case 'contact_us': 
-						include('includes/inc_contact_us.php'); 
+						include('contact_us.php'); 
 						break;
 					case 'login_page':
-     					include('includes/inc_login.php');
+     					include('signin.php');
      					break;
+                    case 'signup_page':
+                        include('signup.php');
+                        break;
 					case 'forgot_password':
      					include('includes/inc_forgot_password.php');
      					break;
+                    case 'thanks_message':
+                        include('thanks.php');
+                        break;
 					case 'bulletin_selling':
      					include('includes/inc_bulletin_selling.php');
      					break;
