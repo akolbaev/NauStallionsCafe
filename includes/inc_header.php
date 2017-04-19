@@ -1,4 +1,6 @@
- 
+<?php
+include_once "includes/init.php";
+?> 
  <!DOCTYPE html>
  <html>
  <head>
