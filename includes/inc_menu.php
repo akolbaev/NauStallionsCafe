@@ -8,11 +8,7 @@
     <title></title>
 
         <!-- Bootstrap -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap-social.css" rel="stylesheet">
-    <link href="css/mystyles.css" rel="stylesheet">
+   
     
     
     
@@ -26,6 +22,8 @@
 </head>
  
 <body>
+      <div id="backgroundimage">
+          <div id="backgroundimage-overlay">
       
 
      <div>
@@ -69,7 +67,8 @@
             </div>
         </div>
   
-   
+       </div>
+    </div>
 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -111,6 +110,25 @@
                         },
                         {
                            name:'ElaiCheese Cake',
+                           image: 'images/elaicheesecake.png',
+                           category: 'dessert',
+                           label:'',
+                           price:'2.99',
+                           description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
+                           comment: ''
+                        },
+                         {
+                           name:'French Cake',
+                           image: 'images/elaicheesecake.png',
+                           category: 'dessert',
+                           label:'',
+                           price:'2.99',
+                           description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
+                           comment: ''
+                        }
+                   ,
+                         {
+                           name:'French Cake',
                            image: 'images/elaicheesecake.png',
                            category: 'dessert',
                            label:'',

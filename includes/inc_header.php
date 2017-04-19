@@ -1,7 +1,9 @@
+
 <?php
 include_once "includes/init.php";
 ?> 
- <!DOCTYPE html>
+ 
+<!DOCTYPE html>
  <html>
  <head>
      <title></title>
@@ -97,9 +99,7 @@ include_once "includes/init.php";
                       <button type="button" class="btn btn-default btn-sm"
                        data-dismiss="modal">Cancel</button>
                 </form>
-
              
-
             </div>
         </div>
         </div>
@@ -130,4 +130,3 @@ include_once "includes/init.php";
  
  </body>
  </html>
- 

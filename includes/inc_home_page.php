@@ -13,7 +13,9 @@
       </ul>
     </div>            
   </div>
-</div>     
+</div>    
+
+
 <!-- SLIDE SHOW -->
 <div class="container">
     <div class="row row-content">
