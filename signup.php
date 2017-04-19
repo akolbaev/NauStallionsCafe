@@ -1,15 +1,12 @@
 <?php
-if(isset($_GET['msg']) && $_GET['msg']!='')
-{
-	$msg=$_GET['msg'];
-}
-if(isset($_GET['name']) && $_GET['name']!='')
-{
-	$msg=$_GET['name'];
-}
-error_reporting(0);
-
+include_once "includes/inc_header.php";
+include_once "includes/signup.inc.php";
 ?>
+	<div class="row">
+		<div class="col-md-12">
+			<?php display_message(); ?>
+		</div>
+	</div>
 
 <html>
 <head>
@@ -62,12 +59,15 @@ error_reporting(0);
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="register-form" action="signuppros.php" method="post" role="form" style="display: block;">
+								<form id="register-form" action="#" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="" value="">
 									</div>
 									<div class="form-group">
-										<input type="text" name="fullname" id="fullname" tabindex="1" class="form-control" placeholder="Full Name" required="" value="">
+										<input type="text" name="first_name" id="first_name" tabindex="1" class="form-control" placeholder="First Name" required="" value="">
+									</div>
+									<div class="form-group">
+										<input type="text" name="last_name" id="last_name" tabindex="1" class="form-control" placeholder="Last Name" required="" value="">
 									</div>
                                     <div class="form-group">
                                         <select class="form-control" required="" id="sel1">
@@ -85,10 +85,10 @@ error_reporting(0);
 									</div>
 									
 									<div class="form-group">
-										<input type="password" name="u_hash" id="password" tabindex="2" class="form-control" placeholder="Password" required="">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="">
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="">
+										<input type="password" name="confirm_password" id="confirm_password" tabindex="2" class="form-control" placeholder="Confirm Password" required="">
 									</div>
 									<div class="form-group">
 										<div class="row">
@@ -106,6 +106,20 @@ error_reporting(0);
 		</div>
        </div>
     </div>
+<script>
+	var password = document.getElementById("password")
+	, confirm_password = document.getElementById("confirm_password");
 
+	function validatePassword(){
+		if(password.value != confirm_password.value) {
+			confirm_password.setCustomValidity("Passwords Don't Match");
+		} else {
+			confirm_password.setCustomValidity('');
+		}
+	}
+
+	password.onchange = validatePassword;
+	confirm_password.onkeyup = validatePassword;
+</script>
 </body>
 </html>
