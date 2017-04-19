@@ -1,10 +1,12 @@
-<?php if(isset($_GET['msg']) && $_GET['msg']!='')
-{
-	$msg=$_GET['msg'];
-}
-error_reporting(0);
-?>
 
+<?php
+include_once "includes/inc_header.php";
+include_once "includes/signin.inc.php";
+
+if(logged_in()) {
+    redirect("index.php");
+}
+?>
 <html>
 <head>
 	<title></title>
@@ -64,16 +66,19 @@ error_reporting(0);
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="signinpros.php" method="post" role="form" style="display: block;">
+								<form id="login-form" action="#" method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" maxlength="60" required="" value="">
+										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" maxlength="60" required="" value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" maxlength="50" required="">
 									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-										<label for="remember"> Remember Me</label>
+									<div class="input-group text-center">
+										<div class="checkbox">
+                            			<label>
+                              				<input id="remember" type="checkbox" name="remember" value="1"> Remember me
+                            			</label>
+                        				</div>
 									</div>
 									<div class="form-group">
 										<div class="row">
