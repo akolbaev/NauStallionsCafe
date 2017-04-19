@@ -1,0 +1,11 @@
+{
+  "name": "project1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "gruntfile": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
