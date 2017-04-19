@@ -41,6 +41,26 @@
         <div class="row row-content">
              <div class="row row-content" ng-controller="menuController as menuCtrl">
                       <div class="col-xs-12">
+                          
+                              <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation">
+                    <a
+                     aria-controls="all menu"
+                     role="tab">The Menu</a></li>
+                    <li role="presentation">
+                    <a
+                     aria-controls="appetizers"
+                     role="tab">Appetizers</a></li>
+                    <li role="presentation">
+                    <a
+                     aria-controls="mains"
+                     role="tab">Mains</a></li>
+                    <li role="presentation">
+                    <a
+                     aria-controls="desserts"
+                     role="tab">Desserts</a></li>
+                </ul>
+                          
                <ul class="media-list">
                 <li class="media" ng-repeat="dish in menuCtrl.dishes">
                     <div class="media-left media-middle">
@@ -54,9 +74,9 @@
                          <span class="label label-danger">{{dish.label}}</span>
                          <span class="badge">{{dish.price | currency}}</span></h2>
                         <p>{{dish.description}}</p>
-                        <p>Comment: {{dish.comment}}</p>
+                        <!--<p>Comment: {{dish.comment}}</p>
                         <p>Type your comment:
-                         <input type="text" ng-model="dish.comment"></p>
+                         <input type="text" ng-model="dish.comment"></p> -->
                     </div>
                 </li>
             </ul>
@@ -73,13 +93,18 @@
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-
-
+ 
 <script src="bower_components/angular/angular.min.js"></script>
+ <script src="scripts/app.js"></script>   
+
     <script>
 
         var app = angular.module('Project1',[]);
         app.controller('menuController', function() {
+            this.tab = 1;
+  this.filtText = '';
+  
+            
                var dishes=[
                          {
                            name:'Breakfast Croissant',
@@ -139,6 +164,27 @@
                         ];
 
             this.dishes = dishes;
+            
+             this.select = function(setTab) {
+    this.tab = setTab;
+    
+    if (setTab === 2) {
+      this.filtText = "appetizer";
+    } 
+    else if (setTab === 3) {
+      this.filtText = "mains";
+    }
+    else if (setTab === 4) {
+      this.filtText = "dessert";
+    }
+    else {
+      this.filtText = "";
+    }
+  };
+  
+  this.isSelected = function (checkTab) {
+    return (this.tab === checkTab);
+  };
 
         });
 
