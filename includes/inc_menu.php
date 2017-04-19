@@ -69,7 +69,7 @@
                <ul class="media-list tab-pane fade in active">
                        
             
-                <li class="media" ng-repeat="dish in menuCtrl.dishes">
+                <li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.filtText">
                     <div class="media-left media-middle">
                         <a href="#">
                         <img class="media-object img-thumbnail"
@@ -113,10 +113,8 @@
         app.controller('menuController', function() {
             this.tab = 1;
             this.filtText = '';
-              this.select = function(setTab) {
-                this.tab = setTab;
-                
-            }
+             
+            
   
             
                var dishes=[
@@ -179,7 +177,7 @@
 
             this.dishes = dishes;
             
-             this.select = function(setTab) {
+            this.select = function(setTab) {
     this.tab = setTab;
     
     if (setTab === 2) {
