@@ -95,7 +95,7 @@
                            image: 'images/zucchipakoda.png',
                            category: 'appetizer',
                            label:'',
-                           price:'1.99',
+                           price:'3.99',
                            description:'Made to order with any three fresh ingredients served with a flaky butter croissant. Ingredients: Vegetables - Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions, Potato Galette Meats - Chicken, Sausage, Chorizo Cheeses - Cheddar, Swiss, Brie, Goat Cheese, Parmesan Make it a Smart Choice omelette with egg whites and a baguette. Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions',
                            comment: ''
                         },
