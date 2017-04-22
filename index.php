@@ -40,6 +40,9 @@
                     case 'signup_page':
                         include('signup.php');
                         break;
+                    case 'user':
+                        include('includes/inc_user.php');
+                        break;
 					case 'forgot_password':
      					include('includes/inc_forgot_password.php');
      					break;
