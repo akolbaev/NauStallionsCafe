@@ -70,12 +70,7 @@ include_once "includes/signup.inc.php";
 										<input type="text" name="last_name" id="last_name" tabindex="1" class="form-control" placeholder="Last Name" required="" value="">
 									</div>
                                     <div class="form-group">
-                                        <select class="form-control" required="" id="sel1">
-                                            <option selected name="notselected" class="form-control" value="notselected">Not Selected</option>
-                                            <option name="staff" class="form-control" value="staff">Staff</option>
-                                            <option name="student" class="form-control" value="student">Student</option>
-                                            <option name="visitor" class="form-control" value="visitor">Visitor</option>
-                                        </select>
+										<input type="text" name="selection" id="selection" tabindex="1" class="form-control" placeholder="Type Staff, Student, or Visitor" required="" value="">
                                     </div>
                                     <div class="form-group">
                                         <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" required="" value="">
