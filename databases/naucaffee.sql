@@ -1,23 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 13, 2016 at 06:47 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.23
+-- Host: localhost:3306
+-- Generation Time: Apr 23, 2017 at 12:08 AM
+-- Server version: 5.6.34
+-- PHP Version: 7.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Database: `member`
+-- Database: `naucaffee`
 --
 
 -- --------------------------------------------------------
@@ -31,8 +25,9 @@ CREATE TABLE `member` (
   `username` varchar(50) NOT NULL,
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
+  `selection` varchar(20) DEFAULT NULL,
   `email` varchar(150) NOT NULL,
-  `mobilenumber` int(20) NOT NULL,
+  `mobilenumber` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -41,8 +36,15 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`id`, `username`, `first_name`, `last_name`, `email`, `mobilenumber`, `password`, `date_added`) VALUES
-(1, 'rav', 'Ravshanbek', 'Norboev', 'rav@gmail.com', '12334455667', '202cb962ac59075b964b07152d234b70', '2016-11-12 20:24:33');
+INSERT INTO `member` (`id`, `username`, `first_name`, `last_name`, `selection`, `email`, `mobilenumber`, `password`, `date_added`) VALUES
+(1, 'rav', 'Ravshanbek', 'Norboev', NULL, 'rav@gmail.com', '2147483647', '202cb962ac59075b964b07152d234b70', '2016-11-12 20:24:33'),
+(2, 'i kamilov', 'Islam', 'Kamilov', NULL, 'ikamilov@na.edu', '2147483647', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-18 21:20:37'),
+(3, 'btazhibaev', 'Baktybek', 'Tazhibaev', NULL, 'btazhibaev@na.edu', '234651234', 'e10adc3949ba59abbe56e057f20f883e', '2017-04-19 11:27:17'),
+(4, 'isco', 'isco', 'isco', NULL, 'iska@na.edu', '2147483647', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-22 14:14:55'),
+(5, 'isco', 'isco', 'isco', NULL, 'isco@na.edu', '2147483647', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-22 14:16:51'),
+(6, 'rav', 'Ravshanbek', 'Norboev', NULL, 'rav@na.edu', '7892345234523849', '81dc9bdb52d04dc20036dbd8313ed055', '2017-04-22 15:18:27'),
+(9, 'ewer', 'qwer', 'qwer', NULL, 'qqwer@na.edu', '213542134', '10f7ef0077aa26b7a043bc58a78040b0', '2017-04-22 16:42:37'),
+(10, 'isa', 'isa', 'isa', 'Staff', 'ika@na.edu', '8323670979', '10f7ef0077aa26b7a043bc58a78040b0', '2017-04-22 17:05:51');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +64,4 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
