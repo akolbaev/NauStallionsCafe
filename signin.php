@@ -46,7 +46,7 @@ if(logged_in()) {
     </div>            
 </div>
 <div class="main-container">
-<?php display_message(); ?>
+	<?php display_message(); ?>
        <!-- Login preferences -->
       <div class = "login-container"> 
         <div class="row">
