@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		VALUES ('$username', '$first_name', '$last_name', '$email', '$mobilenumber', '$password', now())";
 
 		if ($conn->query($sql) === TRUE) {
+			
 			redirect("index.php?page=thanks_message");
 			exit;
 
