@@ -1,4 +1,4 @@
-<?php include("init.php");
+<?php include("includes/init.php");
 	session_destroy();
 
 	if(isset($_COOKIE['email'])) {
