@@ -1,6 +1,6 @@
 
 <?php
-include_once "includes/init.php";
+include_once "init.php";
 ?> 
  
 <!DOCTYPE html>
