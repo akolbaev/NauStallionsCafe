@@ -2,11 +2,7 @@
 include_once "includes/inc_header.php";
 include_once "includes/signup.inc.php";
 ?>
-	<div class="row">
-		<div class="col-md-12">
-			<?php display_message(); ?>
-		</div>
-	</div>
+	
 
 <html>
 <head>
@@ -38,8 +34,13 @@ include_once "includes/signup.inc.php";
         </ul>
     </div>            
 </div>
-<div class="main-container">
 
+<div class="main-container">
+<div class="row">
+		<div class="col-md-12">
+			<?php display_message(); ?>
+		</div>
+	</div>
        <!-- Login preferences -->
       <div class = "login-container"> 
         <div class="row">
@@ -81,7 +82,7 @@ include_once "includes/signup.inc.php";
                                         <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" required="" value="">
                                     </div>
 									<div class="form-group">
-										<input type="text" name="mobilenumber" id="mobilenumber" tabindex="1" class="form-control" placeholder="Mobile Number" required="" value="">
+										<input type="number" name="mobilenumber" id="mobilenumber" tabindex="1" class="form-control" placeholder="Mobile Number" required="" value="">
 									</div>
 									
 									<div class="form-group">
