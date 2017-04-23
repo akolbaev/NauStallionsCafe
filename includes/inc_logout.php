@@ -1,4 +1,4 @@
-<?php include("includes/init.php");
+<?php include("init.php");
 	session_destroy();
 
 	if(isset($_COOKIE['email'])) {
@@ -7,5 +7,5 @@
 		setcookie('email', '', time()-86400);
 	}
 
-redirect("login.php");
+redirect("index.php?page=login_page");
 ?>
