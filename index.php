@@ -10,7 +10,23 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head 
          content must come *after* these tags -->
     
-   <?php include 'scripts/scripts.php' ?>
+   
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/navslide.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+  
+    
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
     <title>NAU COFFEEHOUSE</title>
     
     
@@ -48,6 +64,9 @@
      					break;
                     case 'thanks_message':
                         include('thanks.php');
+                        break;
+                    case 'logout_page':
+                        include('includes/inc_logout.php');
                         break;
 					case 'bulletin_selling':
      					include('includes/inc_bulletin_selling.php');
