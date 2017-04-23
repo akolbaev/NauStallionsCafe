@@ -37,7 +37,7 @@
                                                 <a href="inc_user_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block">Account Settings</button></a>
                                             </div>
                                             <div style="padding-bottom: 10px;"> 
-                                                <a href="includes/inc_logout.php"><button type="button" class="btn btn-primary btn-lg btn-block btn-danger">Logout</button></a>
+                                                <a href="index.php?page=logout_page"><button type="button" class="btn btn-primary btn-lg btn-block btn-danger">Logout</button></a>
                                             </div>
                                         </p>
                                     </div>
