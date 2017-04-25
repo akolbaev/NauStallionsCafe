@@ -51,7 +51,7 @@
                         include('thanks.php');
                         break;
                     case 'user_post':
-                        include('includes/inc_user.php');
+                        include('includes/inc_post.php');
                         break;
                      case 'user_submit':
                         include('congratulations.php');

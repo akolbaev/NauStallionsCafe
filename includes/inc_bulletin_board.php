@@ -31,9 +31,9 @@
                                     
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
-            echo '<p><img style="width: 300px; height: 225px;" src="'.$row['location'].'"></p>';
+            echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
             echo '<p class="caption">'.$row['caption'].' </p>';
-            echo '<p>Price: $'.$row['price'].' </p>';
+            echo 'Price: $'.$row['price'].'';
             echo '<p>Contact Me: '.$row['contact'].' </p>';
             echo '</div>';
             echo '</div>';
@@ -51,9 +51,9 @@
                                     
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
-            echo '<p><img style="width: 300px; height: 225px;" src="'.$row['location'].'"></p>';
+            echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
             echo '<p class="caption">'.$row['caption'].' </p>';
-            echo '<p>Price: $'.$row['price'].' </p>';
+            echo 'Price: $'.$row['price'].'';
             echo '<p>Contact Me: '.$row['contact'].' </p>';
             echo '</div>';
             echo '</div>';
@@ -71,9 +71,9 @@
                                     
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
-            echo '<p><img style="width: 300px; height: 225px;" src="'.$row['location'].'"></p>';
+            echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
             echo '<p class="caption">'.$row['caption'].' </p>';
-            echo '<p>Price: $'.$row['price'].' </p>';
+            echo 'Price: $'.$row['price'].'';
             echo '<p>Contact Me: '.$row['contact'].' </p>';
             echo '</div>';
             echo '</div>';
