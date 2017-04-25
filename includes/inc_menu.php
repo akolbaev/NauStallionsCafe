@@ -79,29 +79,46 @@
                         </a>
                     </div>
                     <div class="media-body">
-                             <table id="cart" class="table table-hover table condensed">
-                                  
-                        <thead class="media-heading">
+                        
+                    <table id="cart" class="table table-hover table-condensed">
+    				   <thead>
+						  <tr>
+                             <th style="width:50%" class="media-heading">{{dish.name}}</th> 
+							<th style="width:10%">Price</th>
+							<th style="width:8%">Quantity</th>
+							<th style="width:22%" class="text-center">Subtotal</th>
+						 	<th style="width:10%"></th>
+						  </tr>
+                       </thead>
+                        
+                        <tbody>
                             <tr>
-                              
-                                <th style="width:50%">
-                        {{dish.name}}                            
-                         <span class="label label-danger">{{dish.label}}</span> </th>
-                                
-                                 
-                                <th style="width:10%">
-                         <span class="badge">{{dish.price | currency}}</span></th>
-                            <th style="width:8%"><span class="quantity">{{dish.quantity | number}}</span></th>
-                                </tr>
-                           
-                        </thead>
-                                 <p>{{dish.description}}</p>
+                                <td>
+                                    <div class="row, col-sm-10" >
+                                          <p>{{dish.description}}</p>
                         <!--<p>Comment: {{dish.comment}}</p>
                         <p>Type your comment:
                          <input type="text" ng-model="dish.comment"></p> -->
+                                    </div>
+                                </td>
+                                <td>{{dish.price | currency}}</td>
+                                <td data-th="Quantity">
+                                    <input type="number" class="form-control text-center" value="1">
+                                </td>
+                                <td class="text-center">{{dish.price | currency}}</td>
+                            </tr>
+                            
+                        </tbody>
                         
-                       
-                              </table>
+                     </table>
+                        
+                      <!--  <h2 class="media-heading">{{dish.name}}
+                         <span class="label label-danger">{{dish.label}}</span>
+                         <span class="badge">{{dish.price | currency}}</span>
+                        
+                        </h2>-->
+                        
+                      
                     </div>
                 </li>
             </ul>
@@ -143,8 +160,7 @@
                            label:'Hot',
                            price:'4.99',
                            description:'Scrambled eggs with sausage, ham or bacon, topped with fresh cheddar on a flaky butter croissant.',
-                           comment: '',
-                           quantity: ''
+                           comment: ''
                         },
                         {
                            name:'Custom Omelette',
@@ -153,8 +169,7 @@
                            label:'',
                            price:'3.99',
                            description:'Made to order with any three fresh ingredients served with a flaky butter croissant. Ingredients: Vegetables - Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions, Potato Galette Meats - Chicken, Sausage, Chorizo Cheeses - Cheddar, Swiss, Brie, Goat Cheese, Parmesan Make it a Smart Choice omelette with egg whites and a baguette. Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions',
-                           comment: '',
-                           quantity: ''
+                           comment: ''
                         },
                         {
                            name:'Speciality Coffee',
@@ -163,8 +178,7 @@
                            label:'New',
                            price:'1.99',
                            description:'Specialty coffees crafted for you as a single or double. French Roast, Decaf French Roast, Cappuccino, Cafe Latte, American Roast, Cafe Mocha, Espresso, Hot Chocolate, Cafe Americano.',
-                           comment: '',
-                           quantity: ''
+                           comment: ''
                         },
                         {
                            name:'ElaiCheese Cake',
@@ -173,8 +187,7 @@
                            label:'',
                            price:'2.99',
                            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
-                           comment: '',
-                           quantity: ''
+                           comment: ''
                         },
                          {
                            name:'French Cake',
@@ -193,8 +206,7 @@
                            label:'',
                            price:'2.99',
                            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
-                           comment: '',
-                           quantity: ''
+                           comment: ''
                         }
                         ];
 
