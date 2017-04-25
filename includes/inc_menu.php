@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="Project1">
 
+  
+ 
 <head>
     
     <!-- The above 3 meta tags *must* come first in the head; any other head
@@ -77,13 +79,46 @@
                         </a>
                     </div>
                     <div class="media-body">
-                        <h2 class="media-heading">{{dish.name}}
-                         <span class="label label-danger">{{dish.label}}</span>
-                         <span class="badge">{{dish.price | currency}}</span></h2>
-                        <p>{{dish.description}}</p>
+                        
+                    <table id="cart" class="table table-hover table-condensed">
+    				   <thead>
+						  <tr>
+                             <th style="width:50%" class="media-heading">{{dish.name}}</th> 
+							<th style="width:10%">Price</th>
+							<th style="width:8%">Quantity</th>
+							<th style="width:22%" class="text-center">Subtotal</th>
+						 	<th style="width:10%"></th>
+						  </tr>
+                       </thead>
+                        
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="row, col-sm-10" >
+                                          <p>{{dish.description}}</p>
                         <!--<p>Comment: {{dish.comment}}</p>
                         <p>Type your comment:
                          <input type="text" ng-model="dish.comment"></p> -->
+                                    </div>
+                                </td>
+                                <td>{{dish.price | currency}}</td>
+                                <td data-th="Quantity">
+                                    <input type="number" class="form-control text-center" value="1">
+                                </td>
+                                <td class="text-center">{{dish.price | currency}}</td>
+                            </tr>
+                            
+                        </tbody>
+                        
+                     </table>
+                        
+                      <!--  <h2 class="media-heading">{{dish.name}}
+                         <span class="label label-danger">{{dish.label}}</span>
+                         <span class="badge">{{dish.price | currency}}</span>
+                        
+                        </h2>-->
+                        
+                      
                     </div>
                 </li>
             </ul>
