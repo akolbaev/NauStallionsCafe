@@ -3,9 +3,7 @@
 include_once "includes/inc_header.php";
 include_once "includes/signin.inc.php";
 
-if(logged_in()) {
-    redirect("index.php");
-}
+
 ?>
 <html>
 <head>

@@ -60,9 +60,16 @@ include_once "includes/init.php";
                 </ul>
                  <ul class="nav navbar-nav navbar-right">
                    <!-- <li><a data-toggle="modal" data-target="#loginModal">-->
+                    <?php if(!logged_in()) : ?>
                      <li class="active"><a href="index.php?page=login_page"><span class="glyphicon glyphicon-log-in"
                          aria-hidden="true"></span> Sign in</a></li>
-                    
+                         <?php else : ?>
+                    <li class="active"><a href="index.php?page=user"><span class="fa fa-user-circle"
+                         aria-hidden="true"></span>                      <?php echo "" . get_name($_SESSION['email']); ?></a></li>
+                    <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"
+                         aria-hidden="true"></span> Log Out</a></li>
+                    <?php endif; ?>
+
                     
                 </ul>
                 
