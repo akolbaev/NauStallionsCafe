@@ -10,7 +10,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head 
          content must come *after* these tags -->
     
-   <?php include 'scripts/scripts.php' ?>
+   
+   <?php  include 'scripts/scripts.php' ?>
     <title>NAU COFFEEHOUSE</title>
     
     
@@ -48,6 +49,15 @@
      					break;
                     case 'thanks_message':
                         include('thanks.php');
+                        break;
+                    case 'user_post':
+                        include('includes/inc_user.php');
+                        break;
+                     case 'user_submit':
+                        include('congratulations.php');
+                        break;
+                    case 'logout_page':
+                        include('includes/inc_logout.php');
                         break;
 					case 'bulletin_selling':
      					include('includes/inc_bulletin_selling.php');
