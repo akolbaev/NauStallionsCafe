@@ -106,11 +106,17 @@
                                     <input type="number" class="form-control text-center" value="1">
                                 </td>
                                 <td class="text-center">{{dish.price | currency}}</td>
+                                <td class="actions" data-th="">
+								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+							    </td>
                             </tr>
                             
                         </tbody>
                         
+                        
                      </table>
+                        
                         
                       <!--  <h2 class="media-heading">{{dish.name}}
                          <span class="label label-danger">{{dish.label}}</span>
@@ -121,7 +127,20 @@
                       
                     </div>
                 </li>
+                   	<div class="panel-footer col-s-8">
+					<div class="row text-center">
+						<div class="col-xs-9">
+							<h4 class="text-right">Total <strong>$50.00</strong></h4>
+						</div>
+						<div class="col-xs-3">
+							<button type="button" class="btn btn-success btn-block">
+								Checkout
+							</button>
+						</div>
+					</div>
+				</div>
             </ul>
+                  
                     
                   </div>
                          
