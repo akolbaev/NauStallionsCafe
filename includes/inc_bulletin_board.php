@@ -32,9 +32,15 @@
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
             echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
+<<<<<<< HEAD
             echo '<p class="caption" style="text-align:center; font-size: 15px;"><b>'.$row['caption'].' </b></p>';
             echo '<b>Price:</b> $'.$row['price'].'';
             echo '<p><b>Contact Me:</b> '.$row['contact'].' </p>';
+=======
+            echo '<p class="caption">'.$row['caption'].' </p>';
+            echo 'Price: $'.$row['price'].'';
+            echo '<p>Contact Me: '.$row['contact'].' </p>';
+>>>>>>> d43350e2acdeafc2c8055ca033d8a16d3dea6e1b
             echo '</div>';
             echo '</div>';                        
         }
@@ -54,9 +60,16 @@
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
             echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
+<<<<<<< HEAD
             echo '<p class="caption" style="text-align:center; font-size: 15px;"><b>'.$row['caption'].' </b></p>';
             echo '<b>Price:</b> $'.$row['price'].'';
             echo '<p><b>Contact Me:</b> '.$row['contact'].' </p>';
+=======
+            echo '<p class="caption">'.$row['caption'].' </p>';
+            echo 'Price: $'.$row['price'].'';
+            echo '<p>Contact Me: '.$row['contact'].' </p>';
+            echo '</div>';
+>>>>>>> d43350e2acdeafc2c8055ca033d8a16d3dea6e1b
             echo '</div>';
             echo '</div>'; 
                                     
@@ -79,9 +92,16 @@
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
             echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
+<<<<<<< HEAD
             echo '<p class="caption" style="text-align:center; font-size: 15px;"><b>'.$row['caption'].' </b></p>';
             echo '<b>Price:</b> $'.$row['price'].'';
             echo '<p><b>Contact Me:</b> '.$row['contact'].' </p>';
+=======
+            echo '<p class="caption">'.$row['caption'].' </p>';
+            echo 'Price: $'.$row['price'].'';
+            echo '<p>Contact Me: '.$row['contact'].' </p>';
+            echo '</div>';
+>>>>>>> d43350e2acdeafc2c8055ca033d8a16d3dea6e1b
             echo '</div>';
             echo '</div>'; 
                                     

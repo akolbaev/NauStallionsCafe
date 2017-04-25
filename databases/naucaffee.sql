@@ -1,4 +1,13 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
+-- version 4.0.10deb1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Apr 25, 2017 at 11:44 AM
+-- Server version: 5.5.44-0ubuntu0.14.04.1-log
+-- PHP Version: 5.5.9-1ubuntu4.21
+=======
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
@@ -6,10 +15,20 @@
 -- Generation Time: Apr 25, 2017 at 05:04 PM
 -- Server version: 5.6.35
 -- PHP Version: 7.0.15
+>>>>>>> 20c7d5176fa071fd010ad393945f632ea361ea24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+<<<<<<< HEAD
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+=======
+>>>>>>> 20c7d5176fa071fd010ad393945f632ea361ea24
 --
 -- Database: `naucaffee`
 --
@@ -20,8 +39,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `member`
 --
 
-CREATE TABLE `member` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `member` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
@@ -29,8 +48,9 @@ CREATE TABLE `member` (
   `email` varchar(150) NOT NULL,
   `mobilenumber` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `date_added` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `date_added` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `member`
@@ -52,33 +72,29 @@ INSERT INTO `member` (`id`, `username`, `first_name`, `last_name`, `selection`, 
 -- Table structure for table `posts`
 --
 
-CREATE TABLE `posts` (
-  `id` int(11) NOT NULL,
-  `postid` int(11) NOT NULL,
-  `location` varchar(100) NOT NULL,
-  `poststype` varchar(15) DEFAULT NULL,
-  `caption` varchar(100) NOT NULL,
-  `price` varchar(10) DEFAULT NULL,
-  `contact` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `posts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `location` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `caption` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `type` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `price` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `contact` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `posts`
 --
 
---
--- Indexes for table `member`
---
-ALTER TABLE `member`
-  ADD PRIMARY KEY (`id`);
+INSERT INTO `posts` (`id`, `location`, `caption`, `type`, `price`, `contact`) VALUES
+(5, 'posts/Selection_006.png', 'Aigul gulu', 'selling', '34', '34656846'),
+(7, 'posts/Selection_013.png', 'ubuntu', 'living', '654', '763456346');
 
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`postid`),
-  ADD UNIQUE KEY `id` (`id`);
-
+<<<<<<< HEAD
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+=======
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -102,3 +118,4 @@ ALTER TABLE `posts`
 --
 ALTER TABLE `posts`
   ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`id`) REFERENCES `member` (`id`);
+>>>>>>> 20c7d5176fa071fd010ad393945f632ea361ea24
