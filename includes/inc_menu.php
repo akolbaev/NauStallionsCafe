@@ -79,17 +79,29 @@
                         </a>
                     </div>
                     <div class="media-body">
-                        <h2 class="media-heading">{{dish.name}}
-                         <span class="label label-danger">{{dish.label}}</span>
-                         <span class="badge">{{dish.price | currency}}</span>
-                        <span class="badge">{{dish</span>
-                        <span class="quantity">{{dish.quantity | number}}</span>
-                        </h2>
-                        
-                        <p>{{dish.description}}</p>
+                             <table id="cart" class="table table-hover table condensed">
+                                  
+                        <thead class="media-heading">
+                            <tr>
+                              
+                                <th style="width:50%">
+                        {{dish.name}}                            
+                         <span class="label label-danger">{{dish.label}}</span> </th>
+                                
+                                 
+                                <th style="width:10%">
+                         <span class="badge">{{dish.price | currency}}</span></th>
+                            <th style="width:8%"><span class="quantity">{{dish.quantity | number}}</span></th>
+                                </tr>
+                           
+                        </thead>
+                                 <p>{{dish.description}}</p>
                         <!--<p>Comment: {{dish.comment}}</p>
                         <p>Type your comment:
                          <input type="text" ng-model="dish.comment"></p> -->
+                        
+                       
+                              </table>
                     </div>
                 </li>
             </ul>
