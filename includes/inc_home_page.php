@@ -129,21 +129,21 @@ picture navigation before the footer-->
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="images/cafee.jpg" alt="Caffee" style="width:250px; height:250px;">
+          <img class="img-circle" src="images/cafe.jpg" alt="Caffee" style="width:250px; height:250px;">
           <h2>Speciality Coffee</h2>
           <p>Specialty coffees crafted for you as a single or double. French Roast, Decaf French Roast, Cappuccino, Cafe Latte, American Roast, Cafe Mocha, Espresso, Hot Chocolate, Cafe Americano.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/sweet.jpg" alt="Sweets" style="width:250px; height:250px;">
+          <img class="img-circle" src="images/cake.jpg" alt="Sweets" style="width:250px; height:250px;">
           <h2>French Cake</h2>
           <p>A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/Bulletin_Board.png" alt="Bulletin Board" style="width:250px; height:250px;">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <img class="img-circle" src="images/croissant.jpg" alt="Bulletin Board" style="width:250px; height:250px;">
+          <h2>Breakfast Croissant</h2>
+          <p>Scrambled eggs with sausage, ham or bacon, topped with fresh cheddar on a flaky butter croissant.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
