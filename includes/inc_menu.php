@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="Project1">
 
+  
+ 
 <head>
     
     <!-- The above 3 meta tags *must* come first in the head; any other head
@@ -79,7 +81,11 @@
                     <div class="media-body">
                         <h2 class="media-heading">{{dish.name}}
                          <span class="label label-danger">{{dish.label}}</span>
-                         <span class="badge">{{dish.price | currency}}</span></h2>
+                         <span class="badge">{{dish.price | currency}}</span>
+                        <span class="badge">{{dish</span>
+                        <span class="quantity">{{dish.quantity | number}}</span>
+                        </h2>
+                        
                         <p>{{dish.description}}</p>
                         <!--<p>Comment: {{dish.comment}}</p>
                         <p>Type your comment:
@@ -125,7 +131,8 @@
                            label:'Hot',
                            price:'4.99',
                            description:'Scrambled eggs with sausage, ham or bacon, topped with fresh cheddar on a flaky butter croissant.',
-                           comment: ''
+                           comment: '',
+                           quantity: ''
                         },
                         {
                            name:'Custom Omelette',
@@ -134,7 +141,8 @@
                            label:'',
                            price:'3.99',
                            description:'Made to order with any three fresh ingredients served with a flaky butter croissant. Ingredients: Vegetables - Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions, Potato Galette Meats - Chicken, Sausage, Chorizo Cheeses - Cheddar, Swiss, Brie, Goat Cheese, Parmesan Make it a Smart Choice omelette with egg whites and a baguette. Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions',
-                           comment: ''
+                           comment: '',
+                           quantity: ''
                         },
                         {
                            name:'Speciality Coffee',
@@ -143,7 +151,8 @@
                            label:'New',
                            price:'1.99',
                            description:'Specialty coffees crafted for you as a single or double. French Roast, Decaf French Roast, Cappuccino, Cafe Latte, American Roast, Cafe Mocha, Espresso, Hot Chocolate, Cafe Americano.',
-                           comment: ''
+                           comment: '',
+                           quantity: ''
                         },
                         {
                            name:'ElaiCheese Cake',
@@ -152,7 +161,8 @@
                            label:'',
                            price:'2.99',
                            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
-                           comment: ''
+                           comment: '',
+                           quantity: ''
                         },
                          {
                            name:'French Cake',
@@ -171,7 +181,8 @@
                            label:'',
                            price:'2.99',
                            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
-                           comment: ''
+                           comment: '',
+                           quantity: ''
                         }
                         ];
 
