@@ -10,7 +10,7 @@
     <div class="col-xs-12">
         <ul class="breadcrumb">
             <li><a href="index.php?page=home_page">Home</a></li>
-            <li class="active">Bulletin Board</li>
+            <li class="active">User</li>
         </ul>
     </div>            
 </div>
