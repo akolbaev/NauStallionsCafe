@@ -2,8 +2,6 @@
 <?php
 include_once "includes/inc_header.php";
 include_once "includes/signin.inc.php";
-
-
 ?>
 <html>
 <head>
