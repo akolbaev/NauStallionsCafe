@@ -12,32 +12,31 @@
         </ul>
     </div>            
 </div>
-<div class="container " >
-               <h1 style="text-align: center;">Selling</h1>
-               <hr>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="row">
-                
-        </div>
-    </div>
-    <div tabindex="-1" class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button class="close" type="button" data-dismiss="modal">×</button>
-                    <h3 class="modal-title">Heading</h3>
-                </div>
-                <div class="modal-body">
-                    
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<?php 
+    echo '<div class="container">';
+    echo '<div class="row">';
+    echo '<div class="col-md-4">';
+    echo '<h2 style="text-align: center;">Selling</h2>';
+    echo '<p style="padding:10px;"></p>';
+
+    $result = mysqli_query($conn, "SELECT * FROM posts WHERE type = 'selling' ");
+    while($row = mysqli_fetch_array($result))
+        {   
+                                    
+            echo '<div class="col-md-6">';
+            echo '<div class="thumbnail">';
+            echo '<p><img style="width: 300px; height: 225px;" src="'.$row['location'].'"></p>';
+            echo '<p class="caption">'.$row['caption'].' </p>';
+            echo '<p>Price: $'.$row['price'].' </p>';
+            echo '<p>Contact Me: '.$row['contact'].' </p>';
+            echo '</div>';
+            echo '</div>';
+                                    
+        }
+    echo '</div>';
+                            
+    echo '</div>';
+    echo '</div>';
+?>
 </body>
 </html>

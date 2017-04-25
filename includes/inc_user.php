@@ -43,7 +43,7 @@
                                                 <a href=""><button type="button" class="btn btn-primary btn-lg btn-block">Order</button></a>
                                             </div>
                                             <div style="padding-bottom: 10px;"> 
-                                                <a href=""><button type="button" class="btn btn-primary btn-lg btn-block">Post</button></a>
+                                                <a href="index.php?page=user_post"><button type="button" class="btn btn-primary btn-lg btn-block">Post</button></a>
                                             </div>
                                             <div style="padding-bottom: 10px;"> 
                                                 <a href="inc_user_profile.php"><button type="button" class="btn btn-primary btn-lg btn-block">Account Settings</button></a>

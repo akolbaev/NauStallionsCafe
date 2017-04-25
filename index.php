@@ -50,6 +50,12 @@
                     case 'thanks_message':
                         include('thanks.php');
                         break;
+                    case 'user_post':
+                        include('includes/inc_user.php');
+                        break;
+                     case 'user_submit':
+                        include('congratulations.php');
+                        break;
                     case 'logout_page':
                         include('includes/inc_logout.php');
                         break;
