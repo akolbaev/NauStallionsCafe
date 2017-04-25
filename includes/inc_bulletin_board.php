@@ -31,16 +31,18 @@
                                     
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
-            echo '<p><img style="width: 300px; height: 225px;" src="'.$row['location'].'"></p>';
-            echo '<p class="caption">'.$row['caption'].' </p>';
-            echo '<p>Price: $'.$row['price'].' </p>';
-            echo '<p>Contact Me: '.$row['contact'].' </p>';
+            echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
+            echo '<p class="caption" style="text-align:center; font-size: 15px;"><b>'.$row['caption'].' </b></p>';
+            echo '<b>Price:</b> $'.$row['price'].'';
+            echo '<p><b>Contact Me:</b> '.$row['contact'].' </p>';
             echo '</div>';
-            echo '</div>';
-                                    
+            echo '</div>';                        
         }
+    
+
     echo '</div>';
 
+   
     echo '<div class="col-md-4">';
     echo '<h2 style="text-align: center;">Buying</h2>';
     echo '<p style="padding:10px;"></p>';
@@ -51,15 +53,20 @@
                                     
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
-            echo '<p><img style="width: 300px; height: 225px;" src="'.$row['location'].'"></p>';
-            echo '<p class="caption">'.$row['caption'].' </p>';
-            echo '<p>Price: $'.$row['price'].' </p>';
-            echo '<p>Contact Me: '.$row['contact'].' </p>';
+            echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
+            echo '<p class="caption" style="text-align:center; font-size: 15px;"><b>'.$row['caption'].' </b></p>';
+            echo '<b>Price:</b> $'.$row['price'].'';
+            echo '<p><b>Contact Me:</b> '.$row['contact'].' </p>';
             echo '</div>';
-            echo '</div>';
+            echo '</div>'; 
                                     
         }
+
+
+    
     echo '</div>';
+
+    
 
     echo '<div class="col-md-4">';
     echo '<h2 style="text-align: center;">Living</h2>';
@@ -71,18 +78,39 @@
                                     
             echo '<div class="col-md-6">';
             echo '<div class="thumbnail">';
-            echo '<p><img style="width: 300px; height: 225px;" src="'.$row['location'].'"></p>';
-            echo '<p class="caption">'.$row['caption'].' </p>';
-            echo '<p>Price: $'.$row['price'].' </p>';
-            echo '<p>Contact Me: '.$row['contact'].' </p>';
+            echo '<img style="width: 210px; height: 110px;" src="'.$row['location'].'">';
+            echo '<p class="caption" style="text-align:center; font-size: 15px;"><b>'.$row['caption'].' </b></p>';
+            echo '<b>Price:</b> $'.$row['price'].'';
+            echo '<p><b>Contact Me:</b> '.$row['contact'].' </p>';
             echo '</div>';
-            echo '</div>';
+            echo '</div>'; 
                                     
         }
+
     echo '</div>';
-                            
+
+                         
     echo '</div>';
     echo '</div>';
  ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div style="text-align: center; padding-bottom: 20px; ">
+                <a class="btn btn-primary btn-block" href="index.php?page=bulletin_selling">View More . . .</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div style="text-align: center; padding-bottom: 20px; ">
+                <a class="btn btn-primary btn-block" href="index.php?page=bulletin_buying">View More . . .</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div style="text-align: center; padding-bottom: 20px; ">
+                <a class="btn btn-primary btn-block" href="index.php?page=bulletin_living">View More . . .</a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
