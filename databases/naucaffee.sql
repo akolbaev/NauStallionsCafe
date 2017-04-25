@@ -1,34 +1,21 @@
 -- phpMyAdmin SQL Dump
-<<<<<<< HEAD
 -- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 25, 2017 at 11:44 AM
+-- Generation Time: Apr 25, 2017 at 01:07 PM
 -- Server version: 5.5.44-0ubuntu0.14.04.1-log
 -- PHP Version: 5.5.9-1ubuntu4.21
-=======
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
---
--- Host: localhost:3306
--- Generation Time: Apr 25, 2017 at 05:04 PM
--- Server version: 5.6.35
--- PHP Version: 7.0.15
->>>>>>> 20c7d5176fa071fd010ad393945f632ea361ea24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-<<<<<<< HEAD
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
-=======
->>>>>>> 20c7d5176fa071fd010ad393945f632ea361ea24
 --
 -- Database: `naucaffee`
 --
@@ -50,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `member` (
   `password` varchar(50) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `member`
@@ -64,7 +51,9 @@ INSERT INTO `member` (`id`, `username`, `first_name`, `last_name`, `selection`, 
 (5, 'isco', 'isco', 'isco', NULL, 'isco@na.edu', '2147483647', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-22 14:16:51'),
 (6, 'rav', 'Ravshanbek', 'Norboev', NULL, 'rav@na.edu', '7892345234523849', '81dc9bdb52d04dc20036dbd8313ed055', '2017-04-22 15:18:27'),
 (9, 'ewer', 'qwer', 'qwer', NULL, 'qqwer@na.edu', '213542134', '10f7ef0077aa26b7a043bc58a78040b0', '2017-04-22 16:42:37'),
-(10, 'isa', 'isa', 'isa', 'Staff', 'ika@na.edu', '8323670979', '10f7ef0077aa26b7a043bc58a78040b0', '2017-04-22 17:05:51');
+(10, 'isa', 'isa', 'isa', 'Staff', 'ika@na.edu', '8323670979', '10f7ef0077aa26b7a043bc58a78040b0', '2017-04-22 17:05:51'),
+(11, 'ikaragol', 'Ihsan', 'Karagol', 'Student', 'ikaragol@na.edu', '8327096084', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-25 12:25:36'),
+(12, 'kisaev', 'Kalys', 'Isaev', 'Student', 'kisaev@na.edu', '8325604123', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-25 12:55:17');
 
 -- --------------------------------------------------------
 
@@ -79,43 +68,21 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `type` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `price` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `contact` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`id`, `location`, `caption`, `type`, `price`, `contact`) VALUES
-(5, 'posts/Selection_006.png', 'Aigul gulu', 'selling', '34', '34656846'),
-(7, 'posts/Selection_013.png', 'ubuntu', 'living', '654', '763456346');
+(9, 'posts/Selection_005.png', 'Aigul gulu', 'selling', '52523', '214901841491241'),
+(10, 'posts/images.jpg', 'I need House', 'living', '1000.00', '(832)709-6084'),
+(11, 'posts/unbuntu-cave-security-geeks-all.jpg', 'Ubuntu', 'living', '54.0', 'ikaragol@na.edu'),
+(12, 'posts/4e160b46b216b574ec4a5cab04c51e1c.gif', 'Geography', 'buying', '20', 'iska@na.edu'),
+(13, 'posts/img0.jpg', 'Windows', 'selling', '1200', 'kisaev@na.edu');
 
-<<<<<<< HEAD
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-=======
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `member`
---
-ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-  MODIFY `postid` int(11) NOT NULL AUTO_INCREMENT;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `posts`
---
-ALTER TABLE `posts`
-  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`id`) REFERENCES `member` (`id`);
->>>>>>> 20c7d5176fa071fd010ad393945f632ea361ea24
