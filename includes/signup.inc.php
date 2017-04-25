@@ -4,6 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	$username				= $_POST['username'];			
 	$first_name				= $_POST['first_name'];
 	$last_name				= $_POST['last_name'];
+	$selection				= $_POST['selection'];
 	$email					= $_POST['email'];
 	$mobilenumber			= $_POST['mobilenumber'];
 	$password				= md5($_POST['password']);
@@ -21,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 			validation_errors($error);
 		}
 	}else{
-		$sql = "INSERT INTO member (username, first_name, last_name, email, mobilenumber, password, date_added)
-		VALUES ('$username', '$first_name', '$last_name', '$email', '$mobilenumber', '$password', now())";
+		$sql = "INSERT INTO member (username, first_name, last_name, selection, email, mobilenumber, password, date_added)
+		VALUES ('$username', '$first_name', '$last_name', '$selection', '$email', '$mobilenumber', '$password', now())";
 
 		if ($conn->query($sql) === TRUE) {
 			redirect("index.php?page=thanks_message");

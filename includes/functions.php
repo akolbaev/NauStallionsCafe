@@ -14,6 +14,18 @@ function email_exists($email)
 	}
 }
 
+function get_username($email) {
+	global $conn;
+
+	$sql = "SELECT username FROM member WHERE email = '$email'";
+
+	$result = $conn->query($sql);
+
+	$row = $result->fetch_assoc();
+
+	return $row["username"];
+}
+
 function get_name($email) {
 	global $conn;
 
@@ -25,6 +37,43 @@ function get_name($email) {
 
 	return $row["first_name"];
 }
+
+function get_lastname($email) {
+	global $conn;
+
+	$sql = "SELECT last_name FROM member WHERE email = '$email'";
+
+	$result = $conn->query($sql);
+
+	$row = $result->fetch_assoc();
+
+	return $row["last_name"];
+}
+
+function get_dates($email) {
+	global $conn;
+
+	$sql = "SELECT date_added FROM member WHERE email = '$email'";
+
+	$result = $conn->query($sql);
+
+	$row = $result->fetch_assoc();
+
+	return $row["date_added"];
+}
+
+function get_select($email) {
+	global $conn;
+
+	$sql = "SELECT selection FROM member WHERE email = '$email'";
+
+	$result = $conn->query($sql);
+
+	$row = $result->fetch_assoc();
+
+	return $row["selection"];
+}
+
 
 function set_message($message) 
 {

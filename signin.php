@@ -2,10 +2,6 @@
 <?php
 include_once "includes/inc_header.php";
 include_once "includes/signin.inc.php";
-
-if(logged_in()) {
-    redirect("index.php");
-}
 ?>
 <html>
 <head>
@@ -46,7 +42,7 @@ if(logged_in()) {
     </div>            
 </div>
 <div class="main-container">
-
+	<?php display_message(); ?>
        <!-- Login preferences -->
       <div class = "login-container"> 
         <div class="row">
