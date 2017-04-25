@@ -65,7 +65,7 @@ include_once "includes/init.php";
                          aria-hidden="true"></span> Sign in</a></li>
                          <?php else : ?>
                     <li class="active"><a href="index.php?page=user"><span class="fa fa-user-circle"
-                         aria-hidden="true"></span>                      <?php echo "" . get_name($_SESSION['email']); ?></a></li>
+                         aria-hidden="true"></span>                      <?php echo "" . get_username($_SESSION['email']); ?></a></li>
                     <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"
                          aria-hidden="true"></span> Log Out</a></li>
                     <?php endif; ?>
