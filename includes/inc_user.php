@@ -31,9 +31,13 @@
                                     </div>
                                     <div class="col-md-12">
 
-                                        <h2 style="text-align: center;">Customer Name</h2>
-                                        <p style="text-align: center;">Staff or Student or Visitor</p>
-                                        <p style="text-align: center;">Dates to Join</p>
+                                        <h2 style="text-align: center;">
+                                        <?php echo "" . get_name($_SESSION['email']);  ?> 
+                                        <?php echo "" . get_lastname($_SESSION['email']); ?> 
+
+                                        </h2>
+                                        <p style="text-align: center;"><?php echo "" . get_select($_SESSION['email']); ?></p>
+                                        <p style="text-align: center;"><?php echo "" . get_dates($_SESSION['email']); ?></p>
                                         <p>
                                             <div style="padding-bottom: 10px;"> 
                                                 <a href=""><button type="button" class="btn btn-primary btn-lg btn-block">Order</button></a>
