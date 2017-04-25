@@ -127,19 +127,24 @@
                       
                     </div>
                 </li>
-                   	<div class="panel-footer col-s-8">
-					<div class="row text-center">
-						<div class="col-xs-9">
-							<h4 class="text-right">Total <strong>$50.00</strong></h4>
-						</div>
-						<div class="col-xs-3">
-							<button type="button" class="btn btn-success btn-block">
+                   	
+            </ul>
+                     <div class="panel-footer col-s-8" id="menupanelfooter">
+					<div class="row text-center" >
+                        <div class="col-xs-2" >
+							<button type="button" class="btn btn-success btn-block ">
 								Checkout
 							</button>
 						</div>
+						<div class="col-xs-3">
+							<h4 class="text-right">Total <strong>$50.00</strong></h4>
+						</div>
+						
+                        <div class="col-xs-1">
+							<button class="btn btn-success btn-m"><span class="glyphicon glyphicon-shopping-cart"></span> <span class="items">1</span></button>
+						</div>
 					</div>
 				</div>
-            </ul>
                   
                     
                   </div>

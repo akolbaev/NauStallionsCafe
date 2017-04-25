@@ -99,6 +99,9 @@ body{
     position: absolute;
     bottom: 0px;
 }
-
+.menupanelfoot {
+    position: absolute;
+    right: 0;
+}
 
 
