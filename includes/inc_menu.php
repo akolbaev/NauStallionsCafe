@@ -66,9 +66,75 @@
                      aria-controls="desserts"
                      role="tab">Desserts</a></li>
                 </ul>
-                        
-                 <div class="tab-content">
+                          
+                          
+                          
+              <div class="tab-content">
+                     
+                     
                <ul class="media-list tab-pane fade in active">
+                   
+                          
+                   <li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.filtText">
+                       <div class="table-responsive">
+    <table class="table product-table">
+        <!--Table head-->
+        <thead>
+            <tr>
+                <th></th>
+                <th> <p class="text-muted">Item</p></th>
+                <th> <p class="text-muted">Size</p></th>
+                <th> <p class="text-muted">Price</p></th>
+                <th> <p class="text-muted">Quantity</p></th>
+                <th> <p class="text-muted">Amount</p></th>
+                <th></th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <th scope="row">
+                    <a href="#">
+                        <img class="media-object img-thumbnail"
+                         ng-src={{dish.image}} alt="Uthappizza">
+                        </a>
+                </th>
+                <td>
+                    <h4><strong>{{dish.name}}</strong></h4>
+                    <p>{{dish.description}}</p>
+                </td>
+                <td>M</td>
+                <td>{{dish.price}}   {{dish.label}}</td>
+                 <td>
+                    <span class="qty">1 </span>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-sm btn-primary btn-rounded">
+                            <input type="radio" name="options" id="option1">&mdash;
+                        </label>
+                        <label class="btn btn-sm btn-primary btn-rounded">
+                            <input type="radio" name="options" id="option2">+
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+                           </table>
+                       </div>
+                    
+              
+                    
+                    
+                  </li>
+                   	
+               </ul>
+                  
+                    
+              </div>
+                 <!--<div class="tab-content">
+                     
+                     
+               <ul class="media-list tab-pane fade in active">
+                   
                        
             
                 <li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.filtText">
@@ -78,40 +144,74 @@
                          ng-src={{dish.image}} alt="Uthappizza">
                         </a>
                     </div>
-                    <div class="media-body">
+                  <div class="media-body">
+                    <div class="table-responsive">
                         
-                    <table id="cart" class="table table-hover table-condensed">
+                    <table id="cart" class="table product-table ">
     				   <thead>
 						  <tr>
+                            <!--<th></th>
                              <th style="width:50%" class="media-heading"><h4>{{dish.name}}</h4></th> 
 							<th style="width:10%">Price</th>
 							<th style="width:8%">Quantity</th>
 							<th style="width:22%" class="text-center">Subtotal</th>
 						 	<th style="width:10%"></th>
+                              
+                            <th></th>
+                            <th>Product</th>
+                          <!--  <th>Color</th>
+                             <th>Size</th>
+                             <th>Price</th>
+                             <th>QTY</th>
+                             <th>Amount</th>
+                            <th></th>
+                              
 						  </tr>
                        </thead>
                         
                         <tbody>
                             <tr>
+                                
                                 <td>
-                                    <div class="row, col-sm-10" >
+                                    <h5><strong>{{dish.name}}</strong></h5>
+                                    <p >{{dish.description}}</p>
+                                </td>
+                                <td data-th="Size">
+                                    <input type="number" class="form-control text-center" value="1">
+                                </td>
+                             
+                                                        
+                                    
+                                    <!--<div class="row, col-sm-10" >
                                           <p>{{dish.description}} </p>
                                       
                         <!--<p>Comment: {{dish.comment}}</p>
                         <p>Type your comment:
-                         <input type="text" ng-model="dish.comment"></p> -->
-                                    </div>
-                                </td>
+                         <input type="text" ng-model="dish.comment"></p> 
+                                    </div> 
+                               
                                 <td>{{dish.price | currency}}</td>
-                                <td data-th="Quantity">
-                                    <input type="number" class="form-control text-center" value="1">
-                                </td>
-                                <td class="text-center">{{dish.price | currency}}</td>
-                                <td class="actions" data-th="">
-								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
-							    </td>
+                                  <td>
+                    <span class="qty">1 </span>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-sm btn-primary btn-rounded">
+                            <input type="radio" name="options" id="option1">&mdash;
+                        </label>
+                        <label class="btn btn-sm btn-primary btn-rounded">
+                            <input type="radio" name="options" id="option2">+
+                        </label>
+                    </div>
+                </td>
+                                 <td>{{dish.price}} $</td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Remove item">X
+                    </button>
+                </td>
+                          
+                             
                             </tr>
+                            
+                            
                             
                         </tbody>
                         
@@ -123,14 +223,17 @@
                          <span class="label label-danger">{{dish.label}}</span>
                          <span class="badge">{{dish.price | currency}}</span>
                         
-                        </h2>-->
+                        </h2>
                         
                       
                     </div>
+                    </div>
+                    
+                    
                 </li>
                    	
             </ul>
-                    <div class="panel-footer">
+                   <div class="panel-footer">
 					<div class="row text-center">
 						<div class="col-xs-9">
 							<h4 class="text-right">Total <strong>$50.00</strong></h4>
@@ -144,7 +247,7 @@
 				</div>
                   
                     
-                  </div>
+                  </div>-->
                          
             </div>
             </div>
