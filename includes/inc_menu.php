@@ -125,15 +125,16 @@
                 </li>
                    	
             </ul>
-                   <div class="panel-footer">
-					<div class="row text-center">
-						<div class="col-xs-9">
-							<h4 class="text-right">Total <strong>$15.99</strong></h4>
-						</div>
-						<div class="col-xs-3">
-							<button type="button" class="btn btn-success btn-block">
+                 	<div class="panel-footer">
+					<div class="row text-center"  >
+						<div class="col-xs-2">
+                            <button type="button" class="btn btn-success btn-block">
 								Checkout
 							</button>
+							
+						</div>
+						<div class="col-xs-3">
+							<h4 class="text-right">Total <strong>$15.00</strong></h4>
 						</div>
 					</div>
 				</div>
