@@ -80,7 +80,7 @@
         <div class="row row-content">
             <div class="col-xs-12 col-sm-4 col-sm-push-8">
                 
-                <img src="images/boorsok.jpg" alt="Boorsok" style="width:100%; height:250px;">
+                <img class="img-circle" src="images/boorsok.jpg" alt="Boorsok" >
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
 
             </div>
@@ -127,7 +127,7 @@ picture navigation before the footer-->
     <div class="container marketing" style="padding-top: 50px;">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
+      <div class="row, responsive">
         <div class="col-lg-4">
           <img class="img-circle" src="images/cafee.jpg" alt="Caffee" style="width:250px; height:250px;">
           <h2>Speciality Coffee</h2>

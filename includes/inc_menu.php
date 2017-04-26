@@ -83,7 +83,7 @@
                     <table id="cart" class="table table-hover table-condensed">
     				   <thead>
 						  <tr>
-                             <th style="width:50%" class="media-heading">{{dish.name}}</th> 
+                             <th style="width:50%" class="media-heading"><h4>{{dish.name}}</h4></th> 
 							<th style="width:10%">Price</th>
 							<th style="width:8%">Quantity</th>
 							<th style="width:22%" class="text-center">Subtotal</th>
@@ -95,7 +95,8 @@
                             <tr>
                                 <td>
                                     <div class="row, col-sm-10" >
-                                          <p>{{dish.description}}</p>
+                                          <p>{{dish.description}} </p>
+                                      
                         <!--<p>Comment: {{dish.comment}}</p>
                         <p>Type your comment:
                          <input type="text" ng-model="dish.comment"></p> -->
@@ -129,19 +130,15 @@
                 </li>
                    	
             </ul>
-                     <div class="panel-footer col-s-8" id="menupanelfooter">
-					<div class="row text-center" >
-                        <div class="col-xs-2" >
-							<button type="button" class="btn btn-success btn-block ">
-								Checkout
-							</button>
-						</div>
-						<div class="col-xs-3">
+                    <div class="panel-footer">
+					<div class="row text-center">
+						<div class="col-xs-9">
 							<h4 class="text-right">Total <strong>$50.00</strong></h4>
 						</div>
-						
-                        <div class="col-xs-1">
-							<button class="btn btn-success btn-m"><span class="glyphicon glyphicon-shopping-cart"></span> <span class="items">1</span></button>
+						<div class="col-xs-3">
+							<button type="button" class="btn btn-success btn-block">
+								Checkout
+							</button>
 						</div>
 					</div>
 				</div>

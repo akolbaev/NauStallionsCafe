@@ -120,15 +120,25 @@ include_once "includes/init.php";
         <!-- Main component for a primary marketing message or call to action -->
 
         <div class="container">
-            <div class="row row-header">
-                <div class =" col-xs-6 col-sm-5">
+            <div class="row ">
+                <div class =" col-xs-0 col-sm-7">
                     <p style="padding:0px;"></p>
                   
-                     <img src="img/img/logo.png" class="img-reponsive">
-                    <!--<p style="padding:0px;"></p> -->
+                     <img src="img/img/logo.png" class="img-reponsive" alt="Chania">
+                    
                   
+                                
                   
                 </div>
+                 <div class =" col-xs-0 col-sm-5">
+           
+            
+                     <img class="img-responsive, img-thumbnail" src="images/coffeegif.gif" alt="Chania" width="305" >
+                  
+                                
+                  
+                </div>
+          
                 
         
             </div>
