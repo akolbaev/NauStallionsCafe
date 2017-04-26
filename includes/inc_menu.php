@@ -125,19 +125,23 @@
                 </li>
                    	
             </ul>
-                 	<div class="panel-footer">
-					<div class="row text-center"  >
-						<div class="col-xs-2">
-                            <button type="button" class="btn btn-success btn-block">
-								Checkout
-							</button>
-							
-						</div>
-						<div class="col-xs-3">
-							<h4 class="text-right">Total <strong>$15.00</strong></h4>
-						</div>
-					</div>
-				</div>
+                  <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-8 col-md-8">
+                            <button type="button" class="btn btn-labeled btn-warning">
+                                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Continue Shopping</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4">
+                             <button type="button" class="btn btn-labeled btn-danger">
+                                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> Cancel</button>
+                            <button type="button" class="btn btn-labeled btn-success">
+                                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Check out</button>
+                              <button type="button" class="btn btn-labeled btn-success" width="160" >
+                                <span class="btn-label"><i class="glyphicon glyphicon-dollar"></i></span> $ 14.59 </button>
+                           
+                        </div>
+                    </div>
+                </div>
                   
                     
                   </div>
