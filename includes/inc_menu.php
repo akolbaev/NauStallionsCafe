@@ -66,70 +66,94 @@
                      aria-controls="desserts"
                      role="tab">Desserts</a></li>
                 </ul>
+             
                           
                           
                           
-              <div class="tab-content">
+                       
+          <div class="tab-content">
                      
                      
                <ul class="media-list tab-pane fade in active">
                    
-                          
-                   <li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.filtText">
-                       <div class="table-responsive">
+                       
+            
+                <li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.filtText">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                        <img class="media-object img-thumbnail"
+                         ng-src={{dish.image}} alt="Uthappizza">
+                        </a>
+                    </div>
+                  <div class="media-body">
+                      
+                      
+                      <div class="table-responsive">
     <table class="table product-table">
         <!--Table head-->
         <thead>
             <tr>
+                
                 <th></th>
-                <th> <p class="text-muted">Item</p></th>
-                <th> <p class="text-muted">Size</p></th>
-                <th> <p class="text-muted">Price</p></th>
-                <th> <p class="text-muted">Quantity</p></th>
-                <th> <p class="text-muted">Amount</p></th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>QTY</th>
+                <th>Amount</th>
                 <th></th>
             </tr>
         </thead>
-        
-        <tbody>
-            <tr>
-                <th scope="row">
-                    <a href="#">
-                        <img class="media-object img-thumbnail"
-                         ng-src={{dish.image}} alt="Uthappizza">
-                        </a>
-                </th>
-                <td>
-                    <h4><strong>{{dish.name}}</strong></h4>
-                    <p>{{dish.description}}</p>
-                </td>
-                <td>M</td>
-                <td>{{dish.price}}   {{dish.label}}</td>
-                 <td>
-                    <span class="qty">1 </span>
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-sm btn-primary btn-rounded">
-                            <input type="radio" name="options" id="option1">&mdash;
-                        </label>
-                        <label class="btn btn-sm btn-primary btn-rounded">
-                            <input type="radio" name="options" id="option2">+
-                        </label>
-                    </div>
-                </td>
-            </tr>
+           <tbody>
+               <tr>
+                   <td><h2>{{dish.name}}</h2> 
+                   <p>{{dish.description}}</p></td>
+                   <td>Medium</td>
+                   <td>{{dish.price}}</td>
+                     <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="number" class="form-control text-center" value="1">
+                   </td>
+                   <td>{{dish.price}}</td>
+                    
+                   
+               </tr>
         </tbody>
-                           </table>
-                       </div>
+                          
+                          </table>
+                   
+                      </div></div>
                     
-              
                     
-                    
-                  </li>
+                </li>
                    	
-               </ul>
+            </ul>
+                   <div class="panel-footer">
+					<div class="row text-center">
+						<div class="col-xs-9">
+							<h4 class="text-right">Total <strong>$15.99</strong></h4>
+						</div>
+						<div class="col-xs-3">
+							<button type="button" class="btn btn-success btn-block">
+								Checkout
+							</button>
+						</div>
+					</div>
+				</div>
                   
                     
-              </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                  <!--<div class="tab-content">
                      
                      
