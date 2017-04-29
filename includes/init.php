@@ -1,6 +1,8 @@
-<?php ob_start();
+<?php 
+ob_start();
 session_start();
 
-include("db.php");
-include("functions.php");
+include_once("db.php");
+include_once("functions.php");
+ob_end_flush();
 ?>
