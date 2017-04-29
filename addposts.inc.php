@@ -1,5 +1,5 @@
 <?php 
-include 'includes/db.php';
+include 'includes/init.php';
 
 if (!isset($_FILES['image']['tmp_name'])) {
 	echo "";
