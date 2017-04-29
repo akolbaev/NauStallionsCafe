@@ -1,6 +1,16 @@
 <?php
+if (!isset($_FILES['avatar']['tmp_name'])) {
+	echo "";
+	}else{
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
+	
+	$file=$_FILES['avatar']['tmp_name'];
+	$avatar= addslashes(file_get_contents($_FILES['avatar']['tmp_name']));
+	$image_name= addslashes($_FILES['avatar']['name']);
+			
+			move_uploaded_file($_FILES["avatar"]["tmp_name"],"images/avatars/" . $_FILES["avatar"]["name"]);		
+	$photo_location="images/avatars/" . $_FILES["avatar"]["name"];		
 	$username				= $_POST['username'];			
 	$first_name				= $_POST['first_name'];
 	$last_name				= $_POST['last_name'];
@@ -21,9 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		foreach ($errors as $error) {
 			validation_errors($error);
 		}
-	}else{
-		$sql = "INSERT INTO member (username, first_name, last_name, selection, email, mobilenumber, password, date_added)
-		VALUES ('$username', '$first_name', '$last_name', '$selection', '$email', '$mobilenumber', '$password', now())";
+	}
+ 	else{
+		$sql = "INSERT INTO member (photo_location, username, first_name, last_name, selection, email, mobilenumber, password, date_added)
+		VALUES ('$photo_location','$username', '$first_name', '$last_name', '$selection', '$email', '$mobilenumber', '$password', now())";
 
 		if ($conn->query($sql) === TRUE) {
 			redirect("index.php?page=thanks_message");
@@ -35,5 +46,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 		$conn->close();
 	}
-}
+}}
 ?>
