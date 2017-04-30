@@ -40,7 +40,7 @@
                                         <p style="text-align: center;"><?php echo "" . get_dates($_SESSION['email']); ?></p>
                                         <p>
                                             <div style="padding-bottom: 10px;"> 
-                                                <a href=""><button type="button" class="btn btn-primary btn-lg btn-block">Order</button></a>
+                                                <a href="index.php?page=menu"><button type="button" class="btn btn-primary btn-lg btn-block">Order</button></a>
                                             </div>
                                             <div style="padding-bottom: 10px;"> 
                                                 <a href="index.php?page=user_post"><button type="button" class="btn btn-primary btn-lg btn-block">Post</button></a>
