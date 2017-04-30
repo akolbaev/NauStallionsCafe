@@ -94,7 +94,7 @@ function display_message()
 }
 
 function redirect($location){
-	return header("location: {$location}");
+	return header("Location: {$location}");
 }
 
 function validation_errors($error_message) 
