@@ -26,6 +26,18 @@ function get_username($email) {
 	return $row["username"];
 }
 
+function get_number($email) {
+	global $conn;
+
+	$sql = "SELECT mobilenumber FROM member WHERE email = '$email'";
+
+	$result = $conn->query($sql);
+
+	$row = $result->fetch_assoc();
+
+	return $row["mobilenumber"];
+}
+
 function get_name($email) {
 	global $conn;
 
