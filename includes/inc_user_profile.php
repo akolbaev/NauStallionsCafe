@@ -1,3 +1,6 @@
+<?php 
+include "profile.inc.php";
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +10,7 @@
 <div class="container" style="padding-top: 60px;">
   <h1 class="page-header">Edit Profile</h1>
   <div class="row">
-  <form action="includes/profile.inc.php" method="post" enctype="multipart/form-data" name="addroom"> 
+  <form action="#" method="post" enctype="multipart/form-data" name="addroom"> 
     <!-- left column -->
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
@@ -18,59 +21,63 @@
     </div>
     <!-- edit form column -->
     <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-      <div class="alert alert-info alert-dismissable">
-        <a class="panel-close close" data-dismiss="alert">×</a> 
-        <i class="fa fa-coffee"></i>
-        This is an <strong>.alert</strong>. Use this to show important messages to the user.
-      </div>
+      
       <h3>Personal info</h3>
      
         <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<?php echo "" . get_name($_SESSION['email']);  ?> " type="text">
+            <input class="form-control" name="first_name" value="<?php echo "" . get_name($_SESSION['email']);  ?> " type="text">
             <div style="padding: 8px;"></div>
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Last name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<?php echo "" . get_lastname($_SESSION['email']); ?> " type="text">
-            <div style="padding: 8px;"></div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-lg-3 control-label">Selection:</label>
-          <div class="col-lg-8">
-            <input class="form-control" value="<?php echo "" . get_select($_SESSION['email']); ?>" type="text">
-            <div style="padding: 8px;"></div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-lg-3 control-label">Email:</label>
-          <div class="col-lg-8">
-            <input class="form-control" value="<?php echo "" . get_email($_SESSION['email']); ?>" type="email">
+            <input class="form-control" name="last_name" value="<?php echo "" . get_lastname($_SESSION['email']); ?> " type="text">
             <div style="padding: 8px;"></div>
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Username:</label>
           <div class="col-md-8">
-            <input class="form-control" value="<?php echo "" . get_user($_SESSION['email']); ?>" type="text">
+            <input class="form-control" name="username" value="<?php echo "" . get_user($_SESSION['email']); ?>" type="text">
+            <div style="padding: 8px;"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Selection:</label>
+          <div class="col-lg-8">
+            <input class="form-control" name="selection" value="<?php echo "" . get_select($_SESSION['email']); ?>" type="text">
+            <div style="padding: 8px;"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+            <input class="form-control" name="email"  value="<?php echo "" . get_email($_SESSION['email']); ?>" type="email" disabled>
+            <div style="padding: 8px;"></div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-3 control-label">Phone Number:</label>
+          <div class="col-md-8">
+            <input class="form-control" name="mobilenumber" value="<?php echo "" . get_number($_SESSION['email']); ?>" type="text">
             <div style="padding: 8px;"></div>
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Password:</label>
           <div class="col-md-8">
-            <input class="form-control" id="password" value="<?php echo "" . get_password($_SESSION['email']); ?>" type="password">
+            <input class="form-control" name="password" id="password" value="<?php echo "" . get_password($_SESSION['email']); ?>" type="password">
             <div style="padding: 8px;"></div>
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Confirm password:</label>
           <div class="col-md-8">
-            <input class="form-control" id="confirm_password" value="<?php echo "" . get_password($_SESSION['email']); ?>" type="password">
+            <input class="form-control" name="confirm_password" id="confirm_password" value="<?php echo "" . get_password($_SESSION['email']); ?>" type="password">
             <div style="padding: 8px;"></div>
           </div>
         </div>
