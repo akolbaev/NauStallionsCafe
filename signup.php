@@ -60,11 +60,6 @@ include_once "includes/signup.inc.php";
 						<div class="row">
 							<div class="col-lg-12">
 								<form id="register-form" action="#" method="post" role="form" style="display: block;">
-									<div class="text-center">
-        								<img src="images/avatars/default.jpg" style="width: 200px;" class="avatar img-circle img-thumbnail" alt="avatar">
-        								<h6>Upload a photo...</h6>
-        								<input type="file" name="image" class="form-control" placeholder="Upload Image">
-      								</div>
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="" value="">
 									</div>
