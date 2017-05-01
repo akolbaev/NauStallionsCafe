@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	$selection				= $_POST['selection'];
 	$email					= $_POST['email'];
 	$mobilenumber			= $_POST['mobilenumber'];
-	$password				= md5($_POST['password']);
 
 	$errors = [];
 
@@ -19,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		}
 	}
  	else{
-		$sql = "UPDATE `member` SET `last_name` = '$last_name', `first_name` = '$first_name', `selection` = '$selection', `username` = '$username', `mobilenumber` = '$mobilenumber', `password` = '$password' WHERE `member`.`email` = '$email'";
+		$sql = "UPDATE `member` SET `last_name` = '$last_name', `first_name` = '$first_name', `selection` = '$selection', `username` = '$username', `mobilenumber` = '$mobilenumber' WHERE `member`.`email` = '$email'";
 
 		if ($conn->query($sql) === TRUE) {
 			echo '<script language="javascript">';

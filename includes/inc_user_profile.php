@@ -70,14 +70,7 @@ include "profile.inc.php";
         <div class="form-group">
           <label class="col-md-3 control-label">Password:</label>
           <div class="col-md-8">
-            <input class="form-control" name="password" id="password" value="<?php echo "" . get_password($_SESSION['email']); ?>" type="password">
-            <div style="padding: 8px;"></div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-3 control-label">Confirm password:</label>
-          <div class="col-md-8">
-            <input class="form-control" name="confirm_password" id="confirm_password" value="<?php echo "" . get_password($_SESSION['email']); ?>" type="password">
+            <input class="form-control" value="<?php echo "" . get_password($_SESSION['email']); ?>" type="password" readonly>
             <div style="padding: 8px;"></div>
           </div>
         </div>
