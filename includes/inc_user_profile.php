@@ -55,7 +55,7 @@ include "profile.inc.php";
         <div class="form-group">
           <label class="col-lg-3 control-label">Email:</label>
           <div class="col-lg-8">
-            <input class="form-control" name="email"  value="<?php echo "" . get_email($_SESSION['email']); ?>" type="email" disabled>
+            <input class="form-control" name="email"  value="<?php echo "" . get_email($_SESSION['email']); ?>" type="email">
             <div style="padding: 8px;"></div>
           </div>
         </div>
