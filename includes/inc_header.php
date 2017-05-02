@@ -52,7 +52,7 @@ include_once "includes/init.php";
                         </ul>
                      </li>-->
                      <li><a href = "index.php?page=menu"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Menu</a></li>
-                    <li><a href="index.php?page=bulletin_board">Bulletin Board</a></li>
+                    <li><a href="index.php?page=bulletin_board"><i class="fa fa-newspaper-o "></i> Bulletin Board</a></li>
                     
                     <li><a href="index.php?page=contact_us">
                         <i class="fa fa-envelope-o"></i>
