@@ -1,5 +1,5 @@
 <?php 
-include 'includes/db.php';
+include 'includes/init.php';
 
 if (!isset($_FILES['image']['tmp_name'])) {
 	echo "";
@@ -10,11 +10,11 @@ if (!isset($_FILES['image']['tmp_name'])) {
 			
 			move_uploaded_file($_FILES["image"]["tmp_name"],"posts/" . $_FILES["image"]["name"]);
 			
-			$location="posts/" . $_FILES["image"]["name"];
-			$caption=$_POST['caption'];
-			$type=$_POST['type'];
-			$price=$_POST['price'];
-			$contact=$_POST['contact'];
+			$location			="posts/" . $_FILES["image"]["name"];
+			$caption			=$_POST['caption'];
+			$type				=$_POST['type'];
+			$price				=$_POST['price'];
+			$contact			=$_POST['contact'];
 
 			$save=mysqli_query($conn, "INSERT INTO posts (location, caption, type, price, contact) VALUES ('$location','$caption', '$type', '$price', '$contact')");
 			echo "Hello1";

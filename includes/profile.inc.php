@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -9,15 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	$selection				= $_POST['selection'];
 	$email					= $_POST['email'];
 	$mobilenumber			= $_POST['mobilenumber'];
-	$password				= md5($_POST['password']);
-	$confirm_password		= $_POST['confirm_password'];
 
 	$errors = [];
-
-	if (email_exists($email))
-	{
-		$errors[] = "$email is already registered.";
-	}
 
 	if (!empty($errors)) {
 		foreach ($errors as $error) {
@@ -25,10 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		}
 	}
  	else{
-		$sql = "INSERT INTO member (username, first_name, last_name, selection, email, mobilenumber, password, date_added) VALUES ('$username', '$first_name', '$last_name', '$selection', '$email', '$mobilenumber', '$password', now())";
+		$sql = "UPDATE `member` SET `last_name` = '$last_name', `first_name` = '$first_name', `selection` = '$selection', `username` = '$username', `mobilenumber` = '$mobilenumber' WHERE `member`.`email` = '$email'";
 
 		if ($conn->query($sql) === TRUE) {
-			redirect("index.php?page=thanks_message");
+			echo '<script language="javascript">';
+        	echo 'alert("Successfully Updated Your Profile"); location.href="index.php?page=user"';
+        	echo '</script>';
 			exit;
 
 		} else {
@@ -39,4 +34,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	}
 
 }
-?>
+
+ ?>

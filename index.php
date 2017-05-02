@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +9,7 @@
          content must come *after* these tags -->
     
    
-   <?php  include 'scripts/scripts.php' ?>
+   <?php  include_once 'scripts/scripts.php'; ?>
     <title>NAU COFFEEHOUSE</title>
     
     
@@ -55,6 +53,9 @@
                         break;
                      case 'user_submit':
                         include('congratulations.php');
+                        break;
+                    case 'user_profile':
+                        include('includes/inc_user_profile.php');
                         break;
                     case 'logout_page':
                         include('includes/inc_logout.php');
