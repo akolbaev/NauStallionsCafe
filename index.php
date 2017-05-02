@@ -51,6 +51,9 @@
                     case 'user_post':
                         include('includes/inc_post.php');
                         break;
+                    case 'user_posts':
+                        include('includes/inc_individual.php');
+                        break;
                      case 'user_submit':
                         include('congratulations.php');
                         break;
