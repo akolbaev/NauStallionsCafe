@@ -96,7 +96,7 @@
         <div class="menuItems">
             <div class="column-labels">
                 <label class="product-detals">Product</label>
-                <label class="product-size">Size</label>
+               
                 <label class="product-price">Price</label>
                 <label class="product-quantity">Quantity</label>
                 <label class="product-line-price">Total</label>
@@ -107,9 +107,9 @@
                     <div class="product-title">{{dish.name}}</div>
                     <p class="product-description">{{dish.description}}</p>
                 </div>
-                 <div class="product-size">
+                 <!--<div class="product-size">
                     <input type="number" value="2" min="1">
-                </div>
+                </div>-->
                 <div class="product-price">{{dish.price}}</div>
                 <div class="product-quantity">
                     <input type="number" value="2" min="0">
@@ -156,9 +156,33 @@
                 </li>
                    	
             </ul>
-                 
-            <div class="panel-footer">
-                   <!-- <div class="row">
+              
+        <div class="panel-footer">
+            <div class="totals">
+                <div class="totals-item">
+                    <label>Subtotal</label>
+                    <div class="totals-value" id="cart-subtotal">{{dish.price}}</div>
+                </div>
+                <div class="totals-item">
+                    <label>Tax (%8.25)</label>
+                    <div class="totals-value" id="cart-tax">1.00</div>
+                </div>
+                <div class="totals-item">
+                    <label>Shipping</label>
+                    <div class="totals-value" id="cart-shipping">0.00</div>
+                </div>
+                <div class="totals-item totals-item-total">
+                    <label>Grand Total</label>
+                    <div class="totals-value" id="cart-subtotal">{{dish.price}}</div>
+                </div>
+                
+            </div>
+            <button class="checkout">Checkout</button>
+        </div>         
+              
+           <!-- <div class="panel-footer">
+                
+                    <div class="row">
                         <div class="col-xs-6 col-sm-8 col-md-8">
                             <button type="button" class="btn btn-labeled btn-warning">
                                 <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Continue Shopping</button>
@@ -172,8 +196,8 @@
                                 <span class="btn-label"><i class="glyphicon glyphicon-dollar"></i></span> $ 14.59 </button>
                            
                         </div>
-                    </div>-->
-                </div>
+                    </div>
+                </div>-->
                   
                     
                   </div>
