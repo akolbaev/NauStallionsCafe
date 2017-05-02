@@ -21,7 +21,7 @@
 <?php 
     echo '<div class="container">';
     echo '<div class="row">';
-    echo '<div class="col-md-4">';
+    echo '<div class="col-md-4 panel panel-default">';
     echo '<h2 style="text-align: center;">Selling</h2>';
     echo '<p style="padding:10px;"></p>';
 
@@ -43,7 +43,7 @@
     echo '</div>';
 
    
-    echo '<div class="col-md-4">';
+    echo '<div class="col-md-4 panel panel-default">';
     echo '<h2 style="text-align: center;">Buying</h2>';
     echo '<p style="padding:10px;"></p>';
 
@@ -68,7 +68,7 @@
 
     
 
-    echo '<div class="col-md-4">';
+    echo '<div class="col-md-4 panel panel-default">';
     echo '<h2 style="text-align: center;">Living</h2>';
     echo '<p style="padding:10px;"></p>';
 
