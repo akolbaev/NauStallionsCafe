@@ -51,6 +51,54 @@ INSERT INTO `member` (`id`, `username`, `first_name`, `last_name`, `selection`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_admin`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_admin` (
+  `User_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(50) NOT NULL,
+  `Password` varchar(50) NOT NULL,
+  `Full_Name` varchar(100) NOT NULL,
+  PRIMARY KEY (`User_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `tbl_admin`
+--
+
+INSERT INTO `tbl_admin` (`User_ID`, `Username`, `Password`, `Full_Name`) VALUES
+(1, 'admin', 'admin', 'Ravshanbek Norboev'),
+(2, 'admin2', 'admin2', 'Islam Kamilov'),
+(3, 'admin3', 'admin3', 'Azamat Kolbaev');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_contact_us`
+--
+CREATE TABLE IF NOT EXISTS `tbl_contact_us` (
+  `Name_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Phone` varchar(12) NOT NULL,
+  `Message` varchar(500) NOT NULL,
+  `Date_and_Time` varchar(100) NOT NULL,
+  `Subject` varchar(100) NOT NULL,
+  PRIMARY KEY (`Name_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `tbl_contact_us`
+--
+
+INSERT INTO `tbl_contact_us` (`Name_ID`, `Name`, `Email`, `Phone`, `Message`, `Date_and_Time`, `Subject`) VALUES
+(1, 'Test', 'test@yahoo.com', '123456789064', 'This is a Test', '2017-05-01 02:04:50', 'Test');
+
+-- --------------------------------------------------------
+
+
+
+--
 -- Table structure for table `posts`
 --
 
@@ -98,12 +146,21 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`),
   ADD KEY `user_id` (`user_id`);
+<<<<<<< HEAD
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+=======
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+>>>>>>> 3b18b196d11fc62e1f6d96930fd62ed7c6f240d3
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
