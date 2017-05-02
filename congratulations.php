@@ -8,7 +8,7 @@
  <a href="index.php?page=bulletin_board">Bulletin Board</a>
   </p>
   <p class="lead">
-    <a class="btn btn-primary btn-sm" href="index.php?page=user_post" role="button">Post More Product</a>
+    <a class="btn btn-success" href="index.php?page=user_posts" role="button">See Your Products</a>
   </p>
   </div>
 </div>
