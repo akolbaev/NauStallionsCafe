@@ -10,13 +10,14 @@ if (!isset($_FILES['image']['tmp_name'])) {
 			
 			move_uploaded_file($_FILES["image"]["tmp_name"],"posts/" . $_FILES["image"]["name"]);
 			
+			$user_id			=get_id($_SESSION['email']);
 			$location			="posts/" . $_FILES["image"]["name"];
 			$caption			=$_POST['caption'];
 			$type				=$_POST['type'];
 			$price				=$_POST['price'];
 			$contact			=$_POST['contact'];
 
-			$save=mysqli_query($conn, "INSERT INTO posts (location, caption, type, price, contact) VALUES ('$location','$caption', '$type', '$price', '$contact')");
+			$save=mysqli_query($conn, "INSERT INTO posts (user_id, location, caption, type, price, contact) VALUES ('$user_id', '$location','$caption', '$type', '$price', '$contact')");
 			echo "Hello1";
 			header("location: index.php?page=user_submit");
 			echo "hello2";

@@ -14,6 +14,18 @@ function email_exists($email)
 	}
 }
 
+function get_id($email) {
+	global $conn;
+
+	$sql = "SELECT id FROM member WHERE email = '$email'";
+
+	$result = $conn->query($sql);
+
+	$row = $result->fetch_assoc();
+
+	return $row["id"];
+}
+
 function get_username($email) {
 	global $conn;
 
