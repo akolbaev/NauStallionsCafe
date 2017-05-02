@@ -20,7 +20,9 @@ include_once "init.php";
         else{
                 $sql = "INSERT INTO tbl_contact_us (Name, Email, Phone, Subject, Message, Date_and_Time) VALUES ('$Name','$Email','$Phone','$Subject','$Message',now())";
                 if ($conn->query($sql) === TRUE){
-                        redirect("../index.php?page=thanks_message");
+                        echo '<script language="javascript">';
+                        echo 'alert("Thanks for getting in touch with us! We will get back to you shortly."); location.href="../index.php?page=contact_us"';
+                        echo '</script>';
                         exit();
                 } else {
                         set_message("<p>Error: " . $sql . "<br>" . $conn->error . "</p>");
