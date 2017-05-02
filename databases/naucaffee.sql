@@ -146,21 +146,13 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`),
   ADD KEY `user_id` (`user_id`);
-<<<<<<< HEAD
+
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
-=======
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
->>>>>>> 3b18b196d11fc62e1f6d96930fd62ed7c6f240d3
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
