@@ -22,6 +22,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+    
+    
  
 <body>
       <div id="backgroundimage">
@@ -90,8 +92,37 @@
                       
                       <div class="table-responsive">
     <table class="table product-table">
+        
+        <div class="menuItems">
+            <div class="column-labels">
+                <label class="product-detals">Product</label>
+                <label class="product-size">Size</label>
+                <label class="product-price">Price</label>
+                <label class="product-quantity">Quantity</label>
+                <label class="product-line-price">Total</label>
+            </div>
+            
+            <div class="product">
+                <div class="product-details">
+                    <div class="product-title">{{dish.name}}</div>
+                    <p class="product-description">{{dish.description}}</p>
+                </div>
+                 <div class="product-size">
+                    <input type="number" value="2" min="1">
+                </div>
+                <div class="product-price">{{dish.price}}</div>
+                <div class="product-quantity">
+                    <input type="number" value="2" min="0">
+                </div>
+                <div class="product-line-price">{{dish.price}}</div>
+                
+            </div>
+            
+        </div>
+        
+        
         <!--Table head-->
-        <thead>
+     <!--   <thead>
             <tr>
                 
                 <th></th>
@@ -101,8 +132,8 @@
                 <th>Amount</th>
                 <th></th>
             </tr>
-        </thead>
-           <tbody>
+        </thead>-->
+         <!--  <tbody>
                <tr>
                    <td><h2>{{dish.name}}</h2> 
                    <p>{{dish.description}}</p></td>
@@ -115,7 +146,7 @@
                     
                    
                </tr>
-        </tbody>
+        </tbody>-->
                           
                           </table>
                    
@@ -125,8 +156,9 @@
                 </li>
                    	
             </ul>
-                  <div class="panel-footer">
-                    <div class="row">
+                 
+            <div class="panel-footer">
+                   <!-- <div class="row">
                         <div class="col-xs-6 col-sm-8 col-md-8">
                             <button type="button" class="btn btn-labeled btn-warning">
                                 <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Continue Shopping</button>
@@ -140,7 +172,7 @@
                                 <span class="btn-label"><i class="glyphicon glyphicon-dollar"></i></span> $ 14.59 </button>
                            
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                   
                     
