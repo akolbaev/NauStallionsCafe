@@ -1,4 +1,6 @@
-[class*="entypo-"]:before { font-family: 'entypo', sans-serif; }
+[class*="entypo-"]:before 
+
+{ font-family: 'entypo', sans-serif; }
 body {
   background-color: #ecf0f1;
   font: 300 1.25em/1.4 "Lato", sans-serif;
@@ -24,6 +26,7 @@ h1, .sub-heading {
   text-justify: distribute-all-lines;
   font-size: 0 !important;
   text-rendering: optimizespeed;
+  
 }
 ._grid:after {
   content: "";
@@ -42,7 +45,7 @@ h1, .sub-heading {
   display: inline-block;
   background-color: #bdc3c7;
   border: none;
-  padding: .5em .75em;
+  padding: auto;
   text-align: center;
   font-weight: 300;
 }
@@ -93,7 +96,7 @@ h1, .sub-heading {
  */
 .product-info {
   width: 60.832119%;
-  padding: .6rem;
+  padding:auto;
 }
 .product-name {
   font: 300 2.4em/1 "Lato", sans-serif;
