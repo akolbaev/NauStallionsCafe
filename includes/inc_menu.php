@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en" ng-app="Project1">
+    
 
   
  
@@ -25,11 +27,8 @@
     
     
  
-<body>
-      <div id="backgroundimage">
-          <div id="backgroundimage-overlay">
-      
-
+<body >
+    
      <div>
          <div class="row">
             <div class="col-xs-12">
@@ -87,38 +86,25 @@
                          ng-src={{dish.image}} alt="Uthappizza">
                         </a>
                     </div>
-                  <div class="media-body">
-                      
-                      
-                      <div class="table-responsive">
-    <table class="table product-table">
+     <div class="media-body">
+        <ol class="ui-list shopping-cart--list" id="shopping-cart--list">        
+            <h5 class="product-name">{{dish.name}}</h5>
+            <p class="product-desc">{{dish.description}}</p>
+            <div class="price product-single-price">${{dish.price}}</div>
+         <div class="_grid">
+              <button class="_btn _column product-subtract">&minus;</button>
+              <div class="_column product-qty">0</div>
+              <button class="_btn _column product-plus">&plus;</button>
+            </div>
+         <button class="_btn entypo-trash product-remove">Remove</button>
+            <div class="price product-total-price">$0.00</div>
+            
+            </ol>  
         
-        <div class="menuItems">
-            <div class="column-labels">
-                <label class="product-detals">Product</label>
-               
-                <label class="product-price">Price</label>
-                <label class="product-quantity">Quantity</label>
-                <label class="product-line-price">Total</label>
-            </div>
-            
-            <div class="product">
-                <div class="product-details">
-                    <div class="product-title">{{dish.name}}</div>
-                    <p class="product-description">{{dish.description}}</p>
-                </div>
-                 <!--<div class="product-size">
-                    <input type="number" value="2" min="1">
-                </div>-->
-                <div class="product-price">{{dish.price}}</div>
-                <div class="product-quantity">
-                    <input type="number" value="2" min="0">
-                </div>
-                <div class="product-line-price">{{dish.price}}</div>
-                
-            </div>
-            
-        </div>
+      
+    
+     
+
         
         
         <!--Table head-->
@@ -148,9 +134,7 @@
                </tr>
         </tbody>-->
                           
-                          </table>
-                   
-                      </div></div>
+                      </div>
                     
                     
                 </li>
@@ -158,46 +142,30 @@
             </ul>
               
         <div class="panel-footer">
-            <div class="totals">
-                <div class="totals-item">
-                    <label>Subtotal</label>
-                    <div class="totals-value" id="cart-subtotal">{{dish.price}}</div>
-                </div>
-                <div class="totals-item">
-                    <label>Tax (%8.25)</label>
-                    <div class="totals-value" id="cart-tax">1.00</div>
-                </div>
-                <div class="totals-item">
-                    <label>Shipping</label>
-                    <div class="totals-value" id="cart-shipping">0.00</div>
-                </div>
-                <div class="totals-item totals-item-total">
-                    <label>Grand Total</label>
-                    <div class="totals-value" id="cart-subtotal">{{dish.price}}</div>
-                </div>
-                
-            </div>
-            <button class="checkout">Checkout</button>
+        <footer class="_grid cart-totals">
+      <div class="_column subtotal" id="subtotalCtr">
+        <div class="cart-totals-key">Subtotal</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column shipping" id="shippingCtr">
+        <div class="cart-totals-key">Shipping</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column taxes" id="taxesCtr">
+        <div class="cart-totals-key">Taxes (6%)</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column total" id="totalCtr">
+        <div class="cart-totals-key">Total</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column checkout">
+        <button class="_btn checkout-btn entypo-forward">Checkout</button>
+      </div>
+    </footer>
         </div>         
               
-           <!-- <div class="panel-footer">
-                
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-8 col-md-8">
-                            <button type="button" class="btn btn-labeled btn-warning">
-                                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Continue Shopping</button>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-4">
-                             <button type="button" class="btn btn-labeled btn-danger">
-                                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span> Cancel</button>
-                            <button type="button" class="btn btn-labeled btn-success">
-                                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span> Check out</button>
-                              <button type="button" class="btn btn-labeled btn-success" width="160" >
-                                <span class="btn-label"><i class="glyphicon glyphicon-dollar"></i></span> $ 14.59 </button>
-                           
-                        </div>
-                    </div>
-                </div>-->
+         
                   
                     
                   </div>
@@ -341,15 +309,14 @@
             </div>
         </div>
   
-       </div>
-    </div>
+   
 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
  
 <script src="bower_components/angular/angular.min.js"></script>
- <script src="scripts/app.js"></script>   
+<!-- <script src="scripts/app.js"></script>   -->
 
     <script>
 
@@ -445,6 +412,8 @@
         });
 
     </script>
+    
+   
     
 </body>
 
