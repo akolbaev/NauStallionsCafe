@@ -26,6 +26,18 @@ function get_id($email) {
 	return $row["id"];
 }
 
+function get_avatar($email) {
+	global $conn;
+
+	$sql = "SELECT avatar FROM member WHERE email = '$email'";
+
+	$result = $conn->query($sql);
+
+	$row = $result->fetch_assoc();
+
+	return $row["avatar"];
+}
+
 function get_username($email) {
 	global $conn;
 

@@ -1,5 +1,5 @@
 <?php 
-include "profile.inc.php";
+include_once "profile.inc.php";
  ?>
 <!DOCTYPE html>
 <html>
@@ -13,10 +13,12 @@ include "profile.inc.php";
   <form action="#" method="post" enctype="multipart/form-data" name="addroom"> 
     <!-- left column -->
     <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="form-group">
       <div class="text-center">
-        <img src="images/avatars/default.jpg" style="width: 150px;" class="avatar img-circle img-thumbnail" alt="avatar">
+        <img id="blah" src="<?php echo "" . get_avatar($_SESSION['email']); ?>" style="width: 145px; height: 150px;"class="avatar img-circle img-thumbnail" alt="avatar">
         <h6>Upload a different photo...</h6>
-        <input type="file" name="avatar" class="text-center center-block well well-sm">
+        <input type="file" name="image" class="text-center form-control" onchange="readURL(this);">
+      </div>
       </div>
     </div>
     <!-- edit form column -->
@@ -105,5 +107,18 @@ include "profile.inc.php";
   password.onchange = validatePassword;
   confirm_password.onkeyup = validatePassword;
 </script>
+<script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 </body>
 </html>

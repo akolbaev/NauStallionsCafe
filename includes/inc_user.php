@@ -24,9 +24,9 @@
                                 <div class="row">
                                     <div class="col-md-12 ">
                                         <center>
-                                            <a class="" href="#">
-                                                <img class="media-object dp img-circle" src="images/avatars/default.jpg" style="width: 180px;height:180px;">
-                                            </a>
+                                           
+                                                <img class="avatar img-circle img-thumbnail" src="<?php echo "" . get_avatar($_SESSION['email']); ?>" style="width: 175px; height: 180px;"">
+                                           
                                         </center>
                                     </div>
                                     <div class="col-md-12">
@@ -57,10 +57,12 @@
                             </div>
                             
                         </div>
+                        <div style="padding: 30px;"></div>
                     </div>
+
                 <div class="col-md-4"></div>
                 </div>
-    
+            
     </div>
 </div>
 </body>
