@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		}
 
 		if ($conn->query($sql) === TRUE) {
-			echo "test";
 			echo '<script language="javascript">';
         	echo 'alert("Successfully Updated Your Profile"); location.href="index.php?page=user"';
         	echo '</script>';

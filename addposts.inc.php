@@ -18,9 +18,9 @@ if (!isset($_FILES['image']['tmp_name'])) {
 			$contact			=$_POST['contact'];
 
 			$save=mysqli_query($conn, "INSERT INTO posts (user_id, location, caption, type, price, contact) VALUES ('$user_id', '$location','$caption', '$type', '$price', '$contact')");
-			echo "Hello1";
+			
 			header("location: index.php?page=user_submit");
-			echo "hello2";
+			
 			exit();		
 	}
 	 ?>
