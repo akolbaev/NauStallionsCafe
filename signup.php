@@ -59,7 +59,13 @@ include_once "includes/signup.inc.php";
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="register-form" action="#" method="post" role="form" style="display: block;">
+								<form id="register-form" action="#" method="post" enctype="multipart/form-data" name="addroom" role="form" style="display: block;">
+									<div class="form-group">	
+      									<div class="text-center">
+        								<img src="images/avatars/default.jpg" id="blah" style="width: 162px; height: 170px;" class="avatar img-circle img-thumbnail" alt="avatar">
+        								<input type="file" name="image" class="text-center center-block well well-sm form-control" onchange="readURL(this);" required="">
+      								</div>
+    								</div>
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" required="" value="">
 									</div>
@@ -116,5 +122,18 @@ include_once "includes/signup.inc.php";
 	password.onchange = validatePassword;
 	confirm_password.onkeyup = validatePassword;
 </script>
+<script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 </body>
 </html>
