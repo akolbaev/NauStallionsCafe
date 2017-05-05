@@ -17,7 +17,7 @@ include_once "profile.inc.php";
       <div class="text-center">
         <img id="blah" src="<?php echo "" . get_avatar($_SESSION['email']); ?>" style="width: 145px; height: 150px;"class="avatar img-circle img-thumbnail" alt="avatar">
         <h6>Upload a different photo...</h6>
-        <input type="file" name="image" class="text-center form-control" onchange="readURL(this);">
+        <input type="file" name="image" class="text-center form-control" onchange="readURL(this);" >
       </div>
       </div>
     </div>
@@ -120,5 +120,6 @@ include_once "profile.inc.php";
             }
         }
     </script>
+
 </body>
 </html>
