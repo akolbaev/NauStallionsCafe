@@ -133,9 +133,9 @@ include_once "includes/init.php";
                  <div class =" col-xs-0 col-sm-5">
            
             
-                     <img class="img-responsive, img-thumbnail" src="images/coffeegif.gif" alt="Chania" width="305" >
+                     <img class="img-responsive, media-object img-thumbnail" src="images/coffeegif.gif" alt="Chania" width="305" >
                   
-                                
+                            
                   
                 </div>
           

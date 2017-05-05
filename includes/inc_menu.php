@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en" ng-app="Project1">
+    
 
   
  
@@ -22,12 +24,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+    
+    
  
-<body>
-      <div id="backgroundimage">
-          <div id="backgroundimage-overlay">
-      
-
+<body >
+    
      <div>
          <div class="row">
             <div class="col-xs-12">
@@ -38,6 +39,10 @@
             </div>            
         </div>
     </div>
+    
+
+    
+    
     
  <div class="container">
         <div class="row row-content">
@@ -73,25 +78,58 @@
                        
           <div class="tab-content">
                      
-                     
+               <section class="shopping-cart">    
                <ul class="media-list tab-pane fade in active">
                    
                        
             
-                <li class="media" ng-repeat="dish in menuCtrl.dishes | filter:menuCtrl.filtText">
-                    <div class="media-left media-middle">
+                <li class="media" id="shopping-cart" ng-repeat="product in menuCtrl.products | filter:menuCtrl.filtText">
+                   <!-- <div class="media-left media-middle">
                         <a href="#">
                         <img class="media-object img-thumbnail"
                          ng-src={{dish.image}} alt="Uthappizza">
                         </a>
-                    </div>
-                  <div class="media-body">
-                      
-                      
-                      <div class="table-responsive">
-    <table class="table product-table">
+                    </div>-->
+    
+         
+        <ol class="ui-list shopping-cart--list" id="shopping-cart--list">  
+             <div class="media-body" id="shopping-cart--list-item-template" type="text/template">
+                 
+            <li class="_grid shopping-cart--list-item">
+          <div class="_column product-image">
+            <a href="#">
+                        <img class="media-object img-thumbnail"
+                         ng-src={{product.image}} alt="Uthappizza">
+                        </a>
+          </div>
+          <div class="_column product-info">
+            <h8 class="product-name">{{product.name}} <label class="productPrice">,  {{product.price}}, {{product.label}}</label></h8>
+             <!-- <div class="price product-single-price">${{dish.price}}</div>-->
+            <p class="product-desc">{{product.description}}</p>
+            
+          </div>
+          <div class="_column product-modifiers" data-product-price="{{product.price}}">
+            <div class="_grid">
+              <button class="_btn _column product-subtract">&minus;</button>
+              <div class="_column product-qty">0</div>
+              <button class="_btn _column product-plus">&plus;</button>
+            </div>
+             
+              
+            <button class="_btn entypo-trash product-remove">Remove</button>
+            <div class="price product-total-price">$0.00</div>
+          </div>
+        </li>
+                 
+            </div>
+            </ol>  
+  
+                </li>
+            </ul>
+                   </section>  
+        
         <!--Table head-->
-        <thead>
+     <!--   <thead>
             <tr>
                 
                 <th></th>
@@ -101,8 +139,8 @@
                 <th>Amount</th>
                 <th></th>
             </tr>
-        </thead>
-           <tbody>
+        </thead>-->
+         <!--  <tbody>
                <tr>
                    <td><h2>{{dish.name}}</h2> 
                    <p>{{dish.description}}</p></td>
@@ -115,45 +153,36 @@
                     
                    
                </tr>
-        </tbody>
+        </tbody>-->
                           
-                          </table>
-                   
-                      </div></div>
-                    
-                    
-                </li>
-                   	
-            </ul>
-                 	<div class="panel-footer">
-					<div class="row text-center"  >
-						<div class="col-xs-2">
-                            <button type="button" class="btn btn-success btn-block">
-								Checkout
-							</button>
-							
-						</div>
-						<div class="col-xs-3">
-							<h4 class="text-right">Total <strong>$15.00</strong></h4>
-						</div>
-					</div>
-				</div>
-                  
-                    
-                  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+              
+        <div class="panel-footer">
+        <footer class="_grid cart-totals">
+      <div class="_column subtotal" id="subtotalCtr">
+        <div class="cart-totals-key">Subtotal</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column shipping" id="shippingCtr">
+        <div class="cart-totals-key">Shipping</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column taxes" id="taxesCtr">
+        <div class="cart-totals-key">Taxes (6%)</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column total" id="totalCtr">
+        <div class="cart-totals-key">Total</div>
+        <div class="cart-totals-value">$0.00</div>
+      </div>
+      <div class="_column checkout">
+        <button class="_btn checkout-btn entypo-forward">Checkout</button>
+      </div>
+    </footer>
+        </div>         
+              
+         
+ </div>
 
                  <!--<div class="tab-content">
                      
@@ -281,17 +310,28 @@
             </div>
         </div>
   
-       </div>
-    </div>
+   
 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
  
 <script src="bower_components/angular/angular.min.js"></script>
- <script src="scripts/app.js"></script>   
+<!-- <script src="scripts/app.js"></script>   -->
 
     <script>
+        
+        (function(){function c(a){this.t=a}function l(a,b){for(var e=b.split(".");e.length;){if(!(e[0]in a))return!1;a=a[e.shift()]}return a}function d(a,b){return a.replace(h,function(e,a,i,f,c,h,k,m){var f=l(b,f),j="",g;if(!f)return"!"==i?d(c,b):k?d(m,b):"";if(!i)return d(h,b);if("@"==i){e=b._key;a=b._val;for(g in f)f.hasOwnProperty(g)&&(b._key=g,b._val=f[g],j+=d(c,b));b._key=e;b._val=a;return j}}).replace(k,function(a,c,d){return(a=l(b,d))||0===a?"%"==c?(new Option(a)).innerHTML.replace(/"/g,"&quot;"):
+a:""})}var h=/\{\{(([@!]?)(.+?))\}\}(([\s\S]+?)(\{\{:\1\}\}([\s\S]+?))?)\{\{\/\1\}\}/g,k=/\{\{([=%])(.+?)\}\}/g;c.prototype.render=function(a){return d(this.t,a)};window.t=c})();
+// end of 't';
+
+Number.prototype.to_$ = function () {
+  return "$" + parseFloat( this ).toFixed(2);
+};
+String.prototype.strip$ = function () {
+  return this.split("$")[1];
+};
+        
 
         var app = angular.module('Project1',[]);
         app.controller('menuController', function() {
@@ -300,8 +340,8 @@
              
             
   
-            
-               var dishes=[
+            shipping: 0,
+                products=[
                          {
                            name:'Breakfast Croissant',
                            image: 'images/uthapizza.png',
@@ -317,7 +357,7 @@
                            category: 'appetizer',
                            label:'',
                            price:'3.99',
-                           description:'Made to order with any three fresh ingredients served with a flaky butter croissant. Ingredients: Vegetables - Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions, Potato Galette Meats - Chicken, Sausage, Chorizo Cheeses - Cheddar, Swiss, Brie, Goat Cheese, Parmesan Make it a Smart Choice omelette with egg whites and a baguette. Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions',
+                           description:'Made to order with any three fresh ingredients served with a flaky butter croissant. Ingredients: Vegetables - Spinach, Tomatoes, Mushrooms, Onions, Red Bell Peppers, Green Onions, Potato Galette Meats',
                            comment: ''
                         },
                         {
@@ -358,8 +398,9 @@
                            comment: ''
                         }
                         ];
+               
 
-            this.dishes = dishes;
+            this.products = products;
             
             this.select = function(setTab) {
     this.tab = setTab;
@@ -381,10 +422,20 @@
   this.isSelected = function (checkTab) {
     return (this.tab === checkTab);
   };
+    
 
+
+            
+            
+            
+            
         });
+        
+        
 
     </script>
+    
+
     
 </body>
 
