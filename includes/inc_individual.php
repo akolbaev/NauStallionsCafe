@@ -10,7 +10,7 @@
     <div class="col-xs-12">
         <ul class="breadcrumb">
             <li><a href="index.php?page=home_page">Home</a></li>
-            <li class="active">Bulletin Board</li>
+            <li class="active">Stallion  Classifieds</li>
         </ul>
     </div>            
 </div>
@@ -19,7 +19,7 @@
                <hr>
                <div style="text-align: center; padding-bottom: 20px; ">
                 <a class="btn btn-success" href="index.php?page=user_post">Post More </a>
-                <a class="btn btn-primary" href="index.php?page=bulletin_board">Go to Bulletin Board</a>
+                <a class="btn btn-primary" href="index.php?page=bulletin_board">Go to Stallion  Classifieds</a>
             </div>
 </div>
                          

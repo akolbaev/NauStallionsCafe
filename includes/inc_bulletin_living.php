@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-xs-12">
         <ul class="breadcrumb">
-            <li><a href="index.php?page=bulletin_board">Bulletin Board</a></li>
+            <li><a href="index.php?page=bulletin_board">Stallion  Classifieds</a></li>
             <li class="active">Living</li>
         </ul>
     </div>            

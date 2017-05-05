@@ -9,12 +9,12 @@
     <div class="col-xs-12">
         <ul class="breadcrumb">
             <li><a href="index.php?page=home_page">Home</a></li>
-            <li class="active">Bulletin Board</li>
+            <li class="active">Stallion  Classifieds</li>
         </ul>
     </div>            
 </div>
  <div class="container " >
-               <h1 style="text-align: center;">Bulletin Board</h1>
+               <h1 style="text-align: center;">Stallion  Classifieds</h1>
                <hr>
 </div>
                          
