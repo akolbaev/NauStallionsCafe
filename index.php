@@ -25,8 +25,10 @@
 						include('includes/inc_home_page.php');
                         break;
                    case 'menu':
-                        include('includes/inc_menu.php');
+                        include('menu.php');
 						break;
+                    case'cartupdate':
+                        include('includes/cart_update');
 					case 'bulletin_board':
      					include('includes/inc_bulletin_board.php');
      					break;
