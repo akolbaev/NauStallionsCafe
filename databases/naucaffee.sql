@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 05, 2017 at 06:40 AM
+-- Generation Time: May 07, 2017 at 06:36 AM
 -- Server version: 5.6.35
 -- PHP Version: 7.0.15
 
@@ -38,8 +38,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id`, `avatar`, `username`, `first_name`, `last_name`, `selection`, `email`, `mobilenumber`, `password`, `date_added`) VALUES
-(1, '', 'rav', 'Ravshanbek', 'Norboev', 'Staff', 'rav@gmail.com', '2147483647', '202cb962ac59075b964b07152d234b70', '2016-11-12 20:24:33'),
-(2, '', 'ikamilov', 'Islam ', 'Kamilov ', 'Admin', 'ikamilov@na.edu', '8324071153', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-18 21:20:37'),
+(1, 'images/avatars/man-156584_960_720.png', 'rav', 'Ravshanbek ', 'Norboev ', 'Staff', 'rav@gmail.com', '2147483647', '202cb962ac59075b964b07152d234b70', '2016-11-12 20:24:33'),
+(2, 'images/avatars/IMG_2057.JPG', 'ikamilov', 'Islam     ', 'Kamilov     ', 'Admin', 'ikamilov@na.edu', '8324071153', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-18 21:20:37'),
 (3, '', 'btazhibaev', 'Baktybek', 'Tazhibaev', 'Student', 'btazhibaev@na.edu', '234651234', 'e10adc3949ba59abbe56e057f20f883e', '2017-04-19 11:27:17'),
 (4, '', 'isco', 'isco', 'isco', 'Visitor', 'iska@na.edu', '2147483647', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-22 14:14:55'),
 (5, '', 'isco', 'isco', 'isco', 'Visitor', 'isco@na.edu', '2147483647', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-22 14:16:51'),
@@ -50,7 +50,9 @@ INSERT INTO `member` (`id`, `avatar`, `username`, `first_name`, `last_name`, `se
 (12, '', 'kisaev', 'Kalys', 'Isaev', 'Student', 'kisaev@na.edu', '8325604123', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-04-25 12:55:17'),
 (13, '', 'zhosmonaliev', 'Zhumabek  ', 'Osmonaliev  ', 'Student', 'zhosmonaliev@na.edu', '8326742965', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-05-04 12:12:13'),
 (18, 'images/avatars/samsung-galaxy-s7.jpg', 'test', 'test   ', 'test   ', 'test', 'test@na.edu', '12312', 'c20ad4d76fe97759aa27a0c99bff6710', '2017-05-04 21:19:37'),
-(19, 'images/avatars/IMG_2057.JPG', 'kamilov', 'Islam  ', 'Kamilov  ', 'Student', 'kamilov@na.edu', '8326531386', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-05-04 23:35:55');
+(19, 'images/avatars/IMG_2057.JPG', 'kamilov', 'Islam  ', 'Kamilov  ', 'Student', 'kamilov@na.edu', '8326531386', 'f6a4eb43ff80e34f1d7c9e85cac46ffb', '2017-05-04 23:35:55'),
+(20, 'images/avatars/man-156584_960_720.png', 'kevin', 'Kevin   ', 'David                                        ', 'Staff', 'john@gmail.com', '8328763685', '827ccb0eea8a706c4c34a16891f84e7b', '2017-05-05 09:29:27'),
+(23, 'images/avatars/man-156584_960_720.png', 'John', 'Kevin  ', 'Tony   ', 'Student', 'tony@gmail.com', '8320862674', '827ccb0eea8a706c4c34a16891f84e7b', '2017-05-05 11:35:39');
 
 -- --------------------------------------------------------
 
@@ -169,7 +171,7 @@ ALTER TABLE `tbl_contact_us`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `posts`
 --
