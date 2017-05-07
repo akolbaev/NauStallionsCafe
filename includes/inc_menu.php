@@ -1,3 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="Project1">
+    
+
+  
+ 
+<head>
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head
+         content must come *after* these tags -->
+    <title></title>
+
+        <!-- Bootstrap -->
+   
+    
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="style/style.css" rel="stylesheet" type="text/css">
+    
+ 
+<body >
+    
+    
+     <div>
+         <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+               <li><a href="index.php?page=home_page">Home</a></li>
+                   <li class="active">Menu</li>
+               </ul>
+            </div>            
+        </div>
+    </div>
+    
 <?php
 session_start();
 include_once("config.php");
@@ -7,31 +53,15 @@ include_once("config.php");
 $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 ?>
 <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Shopping Cart</title>
-<link href="style/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div class="row">
-    <div class="col-xs-12">
-        <ul class="breadcrumb">
-            <li><a href="index.php?page=home_page">Home</a></li>
-            <li class="active">Stallion's menu</li>
-        </ul>
-    </div>            
-</div>
-    
 
-<!--<h1 align="center">Stallion's Menu </h1>-->
+<h1 align="center">Products </h1>
 
 <!-- View Cart Box Start -->
 <?php
 if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"])>0)
 {
 	echo '<div class="cart-view-table-front" id="view-cart">';
-	echo '<h3>Your Cart</h3>';
+	echo '<h3>Your Shopping Cart</h3>';
 	echo '<form method="post" action="cart_update.php">';
 	echo '<table width="100%"  cellpadding="6" cellspacing="0">';
 	echo '<tbody>';
@@ -44,12 +74,12 @@ if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"])>0)
 		$product_qty = $cart_itm["product_qty"];
 		$product_price = $cart_itm["product_price"];
 		$product_code = $cart_itm["product_code"];
-		$product_size = $cart_itm["product_size"];
-		$bg_size = ($b++%2==1) ? 'odd' : 'even'; //zebra stripe
-		echo '<tr class="'.$bg_size.'">';
+		$product_color = $cart_itm["product_color"];
+		$bg_color = ($b++%2==1) ? 'odd' : 'even'; //zebra stripe
+		echo '<tr class="'.$bg_color.'">';
 		echo '<td>Qty <input type="text" size="2" maxlength="2" name="product_qty['.$product_code.']" value="'.$product_qty.'" /></td>';
 		echo '<td>'.$product_name.'</td>';
-		echo '<td><input type="checkbox" name="remove_code[]" value="'.$product_code.'" /> X</td>';
+		echo '<td><input type="checkbox" name="remove_code[]" value="'.$product_code.'" /> Remove</td>';
 		echo '</tr>';
 		$subtotal = ($product_price * $product_qty);
 		$total = ($total + $subtotal);
@@ -90,18 +120,16 @@ $products_item .= <<<EOT
 	<fieldset>
 	
 	<label>
-		<span>Size</span>
-		<select name="product_size">
-		<option value="Medium">Medium</option>
-		<option value="Small">Small</option>
-        <option value="Large">Large</option>
+		<span>Color</span>
+		<select name="product_color">
+		<option value="Black">Black</option>
+		<option value="Silver">Silver</option>
 		</select>
 	</label>
 	
 	<label>
 		<span>Quantity</span>
 		<input type="text" size="2" maxlength="2" name="product_qty" value="1" />
-        
 	</label>
 	
 	</fieldset>
@@ -119,5 +147,13 @@ echo $products_item;
 }
 ?>    
 <!-- Products List End -->
+
+    
+
+    
+
+
 </body>
+
+
 </html>

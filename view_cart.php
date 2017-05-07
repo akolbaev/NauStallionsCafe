@@ -19,7 +19,7 @@ include_once("config.php");
         </ul>
     </div>            
 </div>
-<h1 align="center">View Cart</h1>
+<h1 align="center">Your Order Summary</h1>
 <div class="cart-view-table-back">
 <form method="post" action="cart_update.php">
 <table width="100%"  cellpadding="6" cellspacing="0">
