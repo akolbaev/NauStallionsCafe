@@ -1,11 +1,3 @@
- <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-
-</head>
-
 <?php
 session_start();
 include_once("config.php");
@@ -14,17 +6,23 @@ include_once("config.php");
 //current URL of the Page. cart_update.php redirects back to this URL
 $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 ?>
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Shopping Cart</title>
+<link href="style/style.css" rel="stylesheet" type="text/css">
+</head>
 <body>
-    <link href="style/style.css" rel="stylesheet" type="text/css">
     <div class="row">
     <div class="col-xs-12">
         <ul class="breadcrumb">
             <li><a href="index.php?page=home_page">Home</a></li>
-            <li class="active">Menu</li>
+            <li class="active">Stallion's menu</li>
         </ul>
     </div>            
 </div>
+    
 
 <h1 align="center">Products </h1>
 
@@ -46,9 +44,9 @@ if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"])>0)
 		$product_qty = $cart_itm["product_qty"];
 		$product_price = $cart_itm["product_price"];
 		$product_code = $cart_itm["product_code"];
-		$product_color = $cart_itm["product_size"];
+		$product_color = $cart_itm["product_color"];
 		$bg_color = ($b++%2==1) ? 'odd' : 'even'; //zebra stripe
-		echo '<tr class="'.$bg_size.'">';
+		echo '<tr class="'.$bg_color.'">';
 		echo '<td>Qty <input type="text" size="2" maxlength="2" name="product_qty['.$product_code.']" value="'.$product_qty.'" /></td>';
 		echo '<td>'.$product_name.'</td>';
 		echo '<td><input type="checkbox" name="remove_code[]" value="'.$product_code.'" /> Remove</td>';
@@ -92,11 +90,10 @@ $products_item .= <<<EOT
 	<fieldset>
 	
 	<label>
-		<span>Size</span>
-		<select name="product_size">
-		<option value="Black">Medium</option>
-		<option value="Silver">Small</option>
-        <option value="Silver">Large</option>
+		<span>Color</span>
+		<select name="product_color">
+		<option value="Black">Black</option>
+		<option value="Silver">Silver</option>
 		</select>
 	</label>
 	

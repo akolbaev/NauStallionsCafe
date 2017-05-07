@@ -27,8 +27,9 @@
                    case 'menu':
                         include('menu.php');
 						break;
-                    case'cartupdate':
-                        include('includes/cart_update');
+                    
+                       case'viewcart':
+                        include('view_cart.php');
 					case 'bulletin_board':
      					include('includes/inc_bulletin_board.php');
      					break;

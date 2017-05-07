@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once("config.php");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,11 +9,23 @@ include_once("config.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>View shopping cart</title>
 <link href="style/style.css" rel="stylesheet" type="text/css"></head>
+   
 <body>
+       <div class="row">
+    <div class="col-xs-12" >
+        <ul class="breadcrumb" >
+            <li><a href="index.php?page=home_page">Home</a></li>
+            <li><a href="index.php?page=menu">Stallion's Menu</a></li>
+        </ul>
+    </div>            
+</div>
 <h1 align="center">View Cart</h1>
 <div class="cart-view-table-back">
 <form method="post" action="cart_update.php">
-<table width="100%"  cellpadding="6" cellspacing="0"><thead><tr><th>Quantity</th><th>Name</th><th>Price</th><th>Total</th><th>Remove</th></tr></thead>
+<table width="100%"  cellpadding="6" cellspacing="0">
+    <thead>
+    	<tr><th>Quantity</th><th>Name</th><th>Price</th><th>Total</th><th>Remove</th></tr>
+    </thead>
   <tbody>
  	<?php
 	if(isset($_SESSION["cart_products"])) //check session var
@@ -54,8 +67,20 @@ include_once("config.php");
 		$shipping_cost = ($shipping_cost)?'Shipping Cost : '.$currency. sprintf("%01.2f", $shipping_cost).'<br />':'';
 	}
     ?>
-    <tr><td colspan="5"><span style="float:right;text-align: right;"><?php echo $shipping_cost. $list_tax; ?>Amount Payable : <?php echo sprintf("%01.2f", $grand_total);?></span></td></tr>
-    <tr><td colspan="5"><a href="index.php" class="button">Add More Items</a><button type="submit">Update</button></td></tr>
+    <tr>
+        <td colspan="5">
+            <span style="float:right;text-align: right;">
+            <?php echo $shipping_cost. $list_tax; ?>Amount Payable : <?php echo sprintf("%01.2f", $grand_total);?>
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5">
+            <a href="index.php?page=menu" class="button">Add More Items</a>
+            <button type="submit">Update</button>
+            <a href="https://www.paypal.com/signin?country.x=US&locale.x=en_US" ><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /></a>
+        </td>
+    </tr>
   </tbody>
 </table>
 <input type="hidden" name="return_url" value="<?php 
