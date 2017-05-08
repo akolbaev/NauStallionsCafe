@@ -88,6 +88,33 @@ INSERT INTO `posts` (`id`, `user_id`, `location`, `caption`, `type`, `price`, `c
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `products`
+--
+
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(11) NOT NULL,
+  `product_code` varchar(60) NOT NULL,
+  `product_name` varchar(60) NOT NULL,
+  `product_desc` tinytext NOT NULL,
+  `product_img_name` varchar(60) NOT NULL,
+  `price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `product_code`, `product_name`, `product_desc`, `product_img_name`, `price`) VALUES
+(3, '0001', 'Breakfast Croissant', 'Scrambled eggs with sausage, ham or bacon, topped with fresh cheddar on a flaky butter croissant', 'uthapizza.png', 3.99),
+(4, '0002', 'Custom Omelette', 'Made to order with any three fresh ingredients served with a flaky butter croissant. Ingredients: Vegetable', 'zucchipakoda.png', 3.99),
+(11, '0010', 'Speciality Coffee', 'Specialty coffees crafted for you as a single or double. French Roast, Decaf French Roast, Cappuccino, Cafe Latte, American Roast, Cafe Mocha, Espresso, Hot Chocolate, Cafe Americano.', 'vadonut.png', 1.99),
+(12, '0011', 'ElaiCheese Cake', 'Specialty coffees crafted for you as a single or double. French Roast, A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms.', 'elaicheesecake.png', 2.99),
+(13, '0012', 'ElaiCheese Cake', 'Specialty coffees crafted for you as a single or double. French Roast, A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms.', 'elaicheesecake.png', 2.99),
+(14, '0013', 'ElaiCheese Cake', 'Specialty coffees crafted for you as a single or double. French Roast, A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms.', 'elaicheesecake.png', 2.99);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_admin`
 --
 
@@ -150,6 +177,13 @@ ALTER TABLE `posts`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `product_code` (`product_code`);
+
+--
 -- Indexes for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
@@ -176,6 +210,11 @@ ALTER TABLE `member`
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+--
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
@@ -184,7 +223,7 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_contact_us`
 --
 ALTER TABLE `tbl_contact_us`
-  MODIFY `Name_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Name_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
@@ -194,3 +233,5 @@ ALTER TABLE `tbl_contact_us`
 --
 ALTER TABLE `posts`
   ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `member` (`id`);
+
+
