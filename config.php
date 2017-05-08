@@ -8,9 +8,9 @@ $db_name 		= 'naucaffee';
 $db_host 		= 'localhost';
 
 //paypal settings
-$PayPalMode 			= 'sandbox'; // sandbox or live
-$PayPalApiUsername 		= 'account@gmail.com'; //PayPal API Username
-$PayPalApiPassword 		= '979797979'; //Paypal API password
+$PayPalMode 			= 'live'; // sandbox or live
+$PayPalApiUsername 		= 'kolbai@hotmail.com'; //PayPal API Username
+$PayPalApiPassword 		= 'sooda11929.'; //Paypal API password
 $PayPalApiSignature 	= 'AewouidSeoiewDradoZcgqH3hpacAokIiuNjAwoiedkew'; //Paypal API Signature
 $PayPalCurrencyCode 	= 'USD'; //Paypal Currency Code
 $PayPalReturnURL 		= 'http://yoursite.com/php-shopping-cart-master/paypal-express-checkout/'; //Point to paypal-express-checkout page

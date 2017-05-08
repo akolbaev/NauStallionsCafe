@@ -39,11 +39,11 @@ include_once("config.php");
 			$product_qty = $cart_itm["product_qty"];
 			$product_price = $cart_itm["product_price"];
 			$product_code = $cart_itm["product_code"];
-			$product_color = $cart_itm["product_color"];
+			$product_size = $cart_itm["product_size"];
 			$subtotal = ($product_price * $product_qty); //calculate Price x Qty
 			
-		   	$bg_color = ($b++%2==1) ? 'odd' : 'even'; //class for zebra stripe 
-		    echo '<tr class="'.$bg_color.'">';
+		   	$bg_size = ($b++%2==1) ? 'odd' : 'even'; //class for zebra stripe 
+		    echo '<tr class="'.$bg_size.'">';
 			echo '<td><input type="text" size="2" maxlength="2" name="product_qty['.$product_code.']" value="'.$product_qty.'" /></td>';
 			echo '<td>'.$product_name.'</td>';
 			echo '<td>'.$currency.$product_price.'</td>';
@@ -78,7 +78,7 @@ include_once("config.php");
         <td colspan="5">
             <a href="index.php?page=menu" class="button">Add More Items</a>
             <button type="submit">Update</button>
-            <a href="https://www.paypal.com/signin?country.x=US&locale.x=en_US" ><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /></a>
+            <a href="https://www.paypal.com/signin?country.x=US&locale.x=en_US"  ><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /></a>
         </td>
     </tr>
   </tbody>
